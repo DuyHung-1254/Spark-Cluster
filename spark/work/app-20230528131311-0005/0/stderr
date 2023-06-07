@@ -1,0 +1,1640 @@
+Spark Executor Command: "/usr/lib/jvm/java-11-openjdk-amd64/bin/java" "-cp" "/home/pc1/opt/spark/conf/:/home/pc1/opt/spark/jars/*" "-Xmx3072M" "-Dspark.driver.port=45441" "-Djava.net.preferIPv6Addresses=false" "-XX:+IgnoreUnrecognizedVMOptions" "--add-opens=java.base/java.lang=ALL-UNNAMED" "--add-opens=java.base/java.lang.invoke=ALL-UNNAMED" "--add-opens=java.base/java.lang.reflect=ALL-UNNAMED" "--add-opens=java.base/java.io=ALL-UNNAMED" "--add-opens=java.base/java.net=ALL-UNNAMED" "--add-opens=java.base/java.nio=ALL-UNNAMED" "--add-opens=java.base/java.util=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED" "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED" "--add-opens=java.base/sun.nio.cs=ALL-UNNAMED" "--add-opens=java.base/sun.security.action=ALL-UNNAMED" "--add-opens=java.base/sun.util.calendar=ALL-UNNAMED" "--add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED" "-Djdk.reflect.useDirectMethodHandle=false" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@192.168.1.45:45441" "--executor-id" "0" "--hostname" "192.168.1.57" "--cores" "4" "--app-id" "app-20230528131311-0005" "--worker-url" "spark://Worker@192.168.1.57:38119" "--resourceProfileId" "0"
+========================================
+
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+23/05/28 13:13:13 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 41340@duyhung-Inspiron-3593
+23/05/28 13:13:13 INFO SignalUtils: Registering signal handler for TERM
+23/05/28 13:13:13 INFO SignalUtils: Registering signal handler for HUP
+23/05/28 13:13:13 INFO SignalUtils: Registering signal handler for INT
+23/05/28 13:13:13 WARN Utils: Your hostname, duyhung-Inspiron-3593 resolves to a loopback address: 127.0.1.1; using 192.168.1.57 instead (on interface wlp3s0)
+23/05/28 13:13:13 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/05/28 13:13:14 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/05/28 13:13:14 INFO SecurityManager: Changing view acls to: pc1
+23/05/28 13:13:14 INFO SecurityManager: Changing modify acls to: pc1
+23/05/28 13:13:14 INFO SecurityManager: Changing view acls groups to: 
+23/05/28 13:13:14 INFO SecurityManager: Changing modify acls groups to: 
+23/05/28 13:13:14 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: pc1; groups with view permissions: EMPTY; users with modify permissions: pc1; groups with modify permissions: EMPTY
+23/05/28 13:13:14 INFO TransportClientFactory: Successfully created connection to /192.168.1.45:45441 after 191 ms (0 ms spent in bootstraps)
+23/05/28 13:13:14 INFO SecurityManager: Changing view acls to: pc1
+23/05/28 13:13:14 INFO SecurityManager: Changing modify acls to: pc1
+23/05/28 13:13:14 INFO SecurityManager: Changing view acls groups to: 
+23/05/28 13:13:14 INFO SecurityManager: Changing modify acls groups to: 
+23/05/28 13:13:14 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: pc1; groups with view permissions: EMPTY; users with modify permissions: pc1; groups with modify permissions: EMPTY
+23/05/28 13:13:14 INFO TransportClientFactory: Successfully created connection to /192.168.1.45:45441 after 26 ms (0 ms spent in bootstraps)
+23/05/28 13:13:15 INFO DiskBlockManager: Created local directory at /tmp/spark-cecb9c38-fc69-41ce-8834-562f0900940f/executor-fe349a33-fcfb-4ce0-bf2e-b9c03a85f8c4/blockmgr-1a8b0575-5407-4cff-b331-b3497d723f89
+23/05/28 13:13:15 INFO MemoryStore: MemoryStore started with capacity 1663.2 MiB
+23/05/28 13:13:15 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@192.168.1.45:45441
+23/05/28 13:13:15 INFO WorkerWatcher: Connecting to worker spark://Worker@192.168.1.57:38119
+23/05/28 13:13:15 INFO TransportClientFactory: Successfully created connection to /192.168.1.57:38119 after 12 ms (0 ms spent in bootstraps)
+23/05/28 13:13:15 INFO WorkerWatcher: Successfully connected to spark://Worker@192.168.1.57:38119
+23/05/28 13:13:15 INFO ResourceUtils: ==============================================================
+23/05/28 13:13:15 INFO ResourceUtils: No custom resources configured for spark.executor.
+23/05/28 13:13:15 INFO ResourceUtils: ==============================================================
+23/05/28 13:13:15 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+23/05/28 13:13:15 INFO Executor: Starting executor ID 0 on host 192.168.1.57
+23/05/28 13:13:15 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39449.
+23/05/28 13:13:15 INFO NettyBlockTransferService: Server created on 192.168.1.57:39449
+23/05/28 13:13:15 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+23/05/28 13:13:15 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(0, 192.168.1.57, 39449, None)
+23/05/28 13:13:15 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(0, 192.168.1.57, 39449, None)
+23/05/28 13:13:15 INFO BlockManager: Initialized BlockManager: BlockManagerId(0, 192.168.1.57, 39449, None)
+23/05/28 13:13:15 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+23/05/28 13:13:21 INFO CoarseGrainedExecutorBackend: Got assigned task 6
+23/05/28 13:13:21 INFO Executor: Running task 4.0 in stage 2.0 (TID 6)
+23/05/28 13:13:21 INFO CoarseGrainedExecutorBackend: Got assigned task 10
+23/05/28 13:13:21 INFO Executor: Running task 8.0 in stage 2.0 (TID 10)
+23/05/28 13:13:21 INFO CoarseGrainedExecutorBackend: Got assigned task 14
+23/05/28 13:13:21 INFO Executor: Running task 12.0 in stage 2.0 (TID 14)
+23/05/28 13:13:21 INFO CoarseGrainedExecutorBackend: Got assigned task 17
+23/05/28 13:13:21 INFO Executor: Running task 15.0 in stage 2.0 (TID 17)
+23/05/28 13:13:21 INFO TorrentBroadcast: Started reading broadcast variable 3 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:13:21 INFO TransportClientFactory: Successfully created connection to /192.168.1.45:39075 after 124 ms (0 ms spent in bootstraps)
+23/05/28 13:13:21 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 6.0 KiB, free 1663.2 MiB)
+23/05/28 13:13:21 INFO TorrentBroadcast: Reading broadcast variable 3 took 338 ms
+23/05/28 13:13:21 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 10.5 KiB, free 1663.2 MiB)
+23/05/28 13:13:22 INFO HadoopRDD: Input split: file:/home/pc1/opt/data/data2M_10c.csv:402653184+33554432
+23/05/28 13:13:22 INFO TorrentBroadcast: Started reading broadcast variable 0 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:13:22 INFO HadoopRDD: Input split: file:/home/pc1/opt/data/data2M_10c.csv:134217728+33554432
+23/05/28 13:13:22 INFO HadoopRDD: Input split: file:/home/pc1/opt/data/data2M_10c.csv:268435456+33554432
+23/05/28 13:13:22 INFO HadoopRDD: Input split: file:/home/pc1/opt/data/data2M_10c.csv:503316480+33554432
+23/05/28 13:13:22 INFO TransportClientFactory: Successfully created connection to /192.168.1.57:44191 after 12 ms (0 ms spent in bootstraps)
+23/05/28 13:13:22 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 32.6 KiB, free 1663.2 MiB)
+23/05/28 13:13:22 INFO TorrentBroadcast: Reading broadcast variable 0 took 95 ms
+23/05/28 13:13:22 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 367.5 KiB, free 1662.8 MiB)
+23/05/28 13:13:27 INFO PythonRunner: Times: total = 4728, boot = 945, init = 1459, finish = 2324
+23/05/28 13:13:27 INFO MemoryStore: Block rdd_4_15 stored as values in memory (estimated size 10.6 MiB, free 1652.2 MiB)
+23/05/28 13:13:27 INFO PythonRunner: Times: total = 4753, boot = 916, init = 1567, finish = 2270
+23/05/28 13:13:27 INFO MemoryStore: Block rdd_4_4 stored as values in memory (estimated size 10.7 MiB, free 1641.6 MiB)
+23/05/28 13:13:27 INFO Executor: Finished task 15.0 in stage 2.0 (TID 17). 1530 bytes result sent to driver
+23/05/28 13:13:27 INFO Executor: Finished task 4.0 in stage 2.0 (TID 6). 1573 bytes result sent to driver
+23/05/28 13:13:27 INFO CoarseGrainedExecutorBackend: Got assigned task 38
+23/05/28 13:13:27 INFO Executor: Running task 36.0 in stage 2.0 (TID 38)
+23/05/28 13:13:27 INFO CoarseGrainedExecutorBackend: Got assigned task 39
+23/05/28 13:13:27 INFO Executor: Running task 37.0 in stage 2.0 (TID 39)
+23/05/28 13:13:27 INFO HadoopRDD: Input split: file:/home/pc1/opt/data/data2M_10c.csv:1241513984+33554432
+23/05/28 13:13:27 INFO HadoopRDD: Input split: file:/home/pc1/opt/data/data2M_10c.csv:1207959552+33554432
+23/05/28 13:13:28 INFO PythonRunner: Times: total = 5072, boot = 920, init = 1693, finish = 2459
+23/05/28 13:13:28 INFO MemoryStore: Block rdd_4_8 stored as values in memory (estimated size 10.6 MiB, free 1631.0 MiB)
+23/05/28 13:13:28 INFO Executor: Finished task 8.0 in stage 2.0 (TID 10). 1530 bytes result sent to driver
+23/05/28 13:13:28 INFO CoarseGrainedExecutorBackend: Got assigned task 41
+23/05/28 13:13:28 INFO Executor: Running task 39.0 in stage 2.0 (TID 41)
+23/05/28 13:13:28 INFO HadoopRDD: Input split: file:/home/pc1/opt/data/data2M_10c.csv:1308622848+33554432
+23/05/28 13:13:28 INFO PythonRunner: Times: total = 5250, boot = 935, init = 2068, finish = 2247
+23/05/28 13:13:28 INFO MemoryStore: Block rdd_4_12 stored as values in memory (estimated size 10.6 MiB, free 1620.4 MiB)
+23/05/28 13:13:28 INFO Executor: Finished task 12.0 in stage 2.0 (TID 14). 1530 bytes result sent to driver
+23/05/28 13:13:28 INFO CoarseGrainedExecutorBackend: Got assigned task 42
+23/05/28 13:13:28 INFO Executor: Running task 40.0 in stage 2.0 (TID 42)
+23/05/28 13:13:28 INFO HadoopRDD: Input split: file:/home/pc1/opt/data/data2M_10c.csv:1342177280+33554432
+23/05/28 13:13:30 INFO PythonRunner: Times: total = 2378, boot = -242, init = 518, finish = 2102
+23/05/28 13:13:30 INFO MemoryStore: Block rdd_4_36 stored as values in memory (estimated size 10.6 MiB, free 1609.8 MiB)
+23/05/28 13:13:30 INFO PythonRunner: Times: total = 2526, boot = -206, init = 517, finish = 2215
+23/05/28 13:13:30 INFO MemoryStore: Block rdd_4_37 stored as values in memory (estimated size 10.5 MiB, free 1599.3 MiB)
+23/05/28 13:13:30 INFO Executor: Finished task 36.0 in stage 2.0 (TID 38). 1530 bytes result sent to driver
+23/05/28 13:13:30 INFO Executor: Finished task 37.0 in stage 2.0 (TID 39). 1530 bytes result sent to driver
+23/05/28 13:13:30 INFO CoarseGrainedExecutorBackend: Got assigned task 54
+23/05/28 13:13:30 INFO Executor: Running task 52.0 in stage 2.0 (TID 54)
+23/05/28 13:13:30 INFO CoarseGrainedExecutorBackend: Got assigned task 55
+23/05/28 13:13:30 INFO Executor: Running task 53.0 in stage 2.0 (TID 55)
+23/05/28 13:13:30 INFO HadoopRDD: Input split: file:/home/pc1/opt/data/data2M_10c.csv:1744830464+33554432
+23/05/28 13:13:30 INFO PythonRunner: Times: total = 2458, boot = -80, init = 342, finish = 2196
+23/05/28 13:13:30 INFO MemoryStore: Block rdd_4_39 stored as values in memory (estimated size 10.5 MiB, free 1588.8 MiB)
+23/05/28 13:13:30 INFO HadoopRDD: Input split: file:/home/pc1/opt/data/data2M_10c.csv:1778384896+33554432
+23/05/28 13:13:30 INFO Executor: Finished task 39.0 in stage 2.0 (TID 41). 1530 bytes result sent to driver
+23/05/28 13:13:30 INFO CoarseGrainedExecutorBackend: Got assigned task 56
+23/05/28 13:13:30 INFO Executor: Running task 54.0 in stage 2.0 (TID 56)
+23/05/28 13:13:30 INFO HadoopRDD: Input split: file:/home/pc1/opt/data/data2M_10c.csv:1811939328+33554432
+23/05/28 13:13:30 INFO PythonRunner: Times: total = 2513, boot = -138, init = 466, finish = 2185
+23/05/28 13:13:30 INFO MemoryStore: Block rdd_4_40 stored as values in memory (estimated size 10.6 MiB, free 1578.2 MiB)
+23/05/28 13:13:31 INFO Executor: Finished task 40.0 in stage 2.0 (TID 42). 1530 bytes result sent to driver
+23/05/28 13:13:31 INFO CoarseGrainedExecutorBackend: Got assigned task 58
+23/05/28 13:13:31 INFO Executor: Running task 56.0 in stage 2.0 (TID 58)
+23/05/28 13:13:31 INFO HadoopRDD: Input split: file:/home/pc1/opt/data/data2M_10c.csv:1879048192+33554432
+23/05/28 13:13:32 INFO PythonRunner: Times: total = 2104, boot = -229, init = 400, finish = 1933
+23/05/28 13:13:32 INFO MemoryStore: Block rdd_4_52 stored as values in memory (estimated size 10.7 MiB, free 1567.6 MiB)
+23/05/28 13:13:32 INFO PythonRunner: Times: total = 2200, boot = -178, init = 343, finish = 2035
+23/05/28 13:13:32 INFO MemoryStore: Block rdd_4_53 stored as values in memory (estimated size 10.7 MiB, free 1556.9 MiB)
+23/05/28 13:13:32 INFO Executor: Finished task 52.0 in stage 2.0 (TID 54). 1530 bytes result sent to driver
+23/05/28 13:13:32 INFO Executor: Finished task 53.0 in stage 2.0 (TID 55). 1530 bytes result sent to driver
+23/05/28 13:13:32 INFO CoarseGrainedExecutorBackend: Got assigned task 70
+23/05/28 13:13:32 INFO Executor: Running task 68.0 in stage 2.0 (TID 70)
+23/05/28 13:13:32 INFO CoarseGrainedExecutorBackend: Got assigned task 71
+23/05/28 13:13:32 INFO Executor: Running task 69.0 in stage 2.0 (TID 71)
+23/05/28 13:13:33 INFO PythonRunner: Times: total = 2123, boot = -244, init = 436, finish = 1931
+23/05/28 13:13:33 INFO MemoryStore: Block rdd_4_54 stored as values in memory (estimated size 10.7 MiB, free 1546.2 MiB)
+23/05/28 13:13:33 INFO HadoopRDD: Input split: file:/home/pc1/opt/data/data2M_10c.csv:2281701376+33554432
+23/05/28 13:13:33 INFO HadoopRDD: Input split: file:/home/pc1/opt/data/data2M_10c.csv:2315255808+33554432
+23/05/28 13:13:33 INFO Executor: Finished task 54.0 in stage 2.0 (TID 56). 1530 bytes result sent to driver
+23/05/28 13:13:33 INFO CoarseGrainedExecutorBackend: Got assigned task 72
+23/05/28 13:13:33 INFO Executor: Running task 70.0 in stage 2.0 (TID 72)
+23/05/28 13:13:33 INFO HadoopRDD: Input split: file:/home/pc1/opt/data/data2M_10c.csv:2348810240+33554432
+23/05/28 13:13:34 INFO PythonRunner: Times: total = 1342, boot = -251, init = 413, finish = 1180
+23/05/28 13:13:34 INFO MemoryStore: Block rdd_4_69 stored as values in memory (estimated size 10.6 MiB, free 1535.7 MiB)
+23/05/28 13:13:34 INFO Executor: Finished task 69.0 in stage 2.0 (TID 71). 1530 bytes result sent to driver
+23/05/28 13:13:34 INFO CoarseGrainedExecutorBackend: Got assigned task 76
+23/05/28 13:13:34 INFO Executor: Running task 74.0 in stage 2.0 (TID 76)
+23/05/28 13:13:34 INFO HadoopRDD: Input split: file:/home/pc1/opt/data/data2M_10c.csv:2483027968+33554432
+23/05/28 13:13:34 INFO PythonRunner: Times: total = 1810, boot = -355, init = 502, finish = 1663
+23/05/28 13:13:34 INFO MemoryStore: Block rdd_4_68 stored as values in memory (estimated size 10.6 MiB, free 1525.1 MiB)
+23/05/28 13:13:34 INFO Executor: Finished task 68.0 in stage 2.0 (TID 70). 1530 bytes result sent to driver
+23/05/28 13:13:35 INFO CoarseGrainedExecutorBackend: Got assigned task 79
+23/05/28 13:13:35 INFO Executor: Running task 77.0 in stage 2.0 (TID 79)
+23/05/28 13:13:35 INFO HadoopRDD: Input split: file:/home/pc1/opt/data/data2M_10c.csv:2583691264+33554432
+23/05/28 13:13:35 INFO PythonRunner: Times: total = 4273, boot = -181, init = 416, finish = 4038
+23/05/28 13:13:35 INFO MemoryStore: Block rdd_4_56 stored as values in memory (estimated size 10.5 MiB, free 1514.6 MiB)
+23/05/28 13:13:35 INFO Executor: Finished task 56.0 in stage 2.0 (TID 58). 1530 bytes result sent to driver
+23/05/28 13:13:35 INFO CoarseGrainedExecutorBackend: Got assigned task 84
+23/05/28 13:13:35 INFO Executor: Running task 82.0 in stage 2.0 (TID 84)
+23/05/28 13:13:35 INFO HadoopRDD: Input split: file:/home/pc1/opt/data/data2M_10c.csv:2751463424+33554432
+23/05/28 13:13:36 INFO PythonRunner: Times: total = 1363, boot = -131, init = 268, finish = 1226
+23/05/28 13:13:36 INFO MemoryStore: Block rdd_4_74 stored as values in memory (estimated size 10.6 MiB, free 1504.0 MiB)
+23/05/28 13:13:36 INFO Executor: Finished task 74.0 in stage 2.0 (TID 76). 1530 bytes result sent to driver
+23/05/28 13:13:36 INFO CoarseGrainedExecutorBackend: Got assigned task 87
+23/05/28 13:13:36 INFO Executor: Running task 85.0 in stage 2.0 (TID 87)
+23/05/28 13:13:36 INFO HadoopRDD: Input split: file:/home/pc1/opt/data/data2M_10c.csv:2852126720+33554432
+23/05/28 13:13:37 INFO PythonRunner: Times: total = 1655, boot = -215, init = 342, finish = 1528
+23/05/28 13:13:37 INFO MemoryStore: Block rdd_4_85 stored as values in memory (estimated size 10.5 MiB, free 1493.5 MiB)
+23/05/28 13:13:37 INFO Executor: Finished task 85.0 in stage 2.0 (TID 87). 1530 bytes result sent to driver
+23/05/28 13:13:37 INFO CoarseGrainedExecutorBackend: Got assigned task 98
+23/05/28 13:13:37 INFO Executor: Running task 96.0 in stage 2.0 (TID 98)
+23/05/28 13:13:37 INFO HadoopRDD: Input split: file:/home/pc1/opt/data/data2M_10c.csv:3221225472+33554432
+23/05/28 13:13:38 INFO PythonRunner: Times: total = 3448, boot = -165, init = 292, finish = 3321
+23/05/28 13:13:38 INFO MemoryStore: Block rdd_4_77 stored as values in memory (estimated size 10.6 MiB, free 1482.9 MiB)
+23/05/28 13:13:38 INFO Executor: Finished task 77.0 in stage 2.0 (TID 79). 1530 bytes result sent to driver
+23/05/28 13:13:38 INFO CoarseGrainedExecutorBackend: Got assigned task 100
+23/05/28 13:13:38 INFO Executor: Running task 98.0 in stage 2.0 (TID 100)
+23/05/28 13:13:38 INFO HadoopRDD: Input split: file:/home/pc1/opt/data/data2M_10c.csv:3288334336+33554432
+23/05/28 13:13:38 INFO PythonRunner: Times: total = 5392, boot = -322, init = 483, finish = 5231
+23/05/28 13:13:38 INFO MemoryStore: Block rdd_4_70 stored as values in memory (estimated size 10.6 MiB, free 1472.3 MiB)
+23/05/28 13:13:38 INFO Executor: Finished task 70.0 in stage 2.0 (TID 72). 1530 bytes result sent to driver
+23/05/28 13:13:38 INFO CoarseGrainedExecutorBackend: Got assigned task 102
+23/05/28 13:13:38 INFO Executor: Running task 100.0 in stage 2.0 (TID 102)
+23/05/28 13:13:38 INFO HadoopRDD: Input split: file:/home/pc1/opt/data/data2M_10c.csv:3355443200+33554432
+23/05/28 13:13:40 INFO PythonRunner: Times: total = 5184, boot = -17, init = 132, finish = 5069
+23/05/28 13:13:40 INFO MemoryStore: Block rdd_4_82 stored as values in memory (estimated size 10.7 MiB, free 1461.7 MiB)
+23/05/28 13:13:40 INFO Executor: Finished task 82.0 in stage 2.0 (TID 84). 1530 bytes result sent to driver
+23/05/28 13:13:40 INFO PythonRunner: Times: total = 2870, boot = -65, init = 232, finish = 2703
+23/05/28 13:13:40 INFO MemoryStore: Block rdd_4_96 stored as values in memory (estimated size 10.5 MiB, free 1451.2 MiB)
+23/05/28 13:13:40 INFO Executor: Finished task 96.0 in stage 2.0 (TID 98). 1530 bytes result sent to driver
+23/05/28 13:13:41 INFO PythonRunner: Times: total = 2709, boot = -83, init = 424, finish = 2368
+23/05/28 13:13:41 INFO MemoryStore: Block rdd_4_98 stored as values in memory (estimated size 10.6 MiB, free 1440.6 MiB)
+23/05/28 13:13:41 INFO Executor: Finished task 98.0 in stage 2.0 (TID 100). 1530 bytes result sent to driver
+23/05/28 13:13:42 INFO PythonRunner: Times: total = 3155, boot = -72, init = 423, finish = 2804
+23/05/28 13:13:42 INFO MemoryStore: Block rdd_4_100 stored as values in memory (estimated size 10.5 MiB, free 1430.1 MiB)
+23/05/28 13:13:42 INFO Executor: Finished task 100.0 in stage 2.0 (TID 102). 1530 bytes result sent to driver
+23/05/28 13:13:42 INFO CoarseGrainedExecutorBackend: Got assigned task 113
+23/05/28 13:13:42 INFO Executor: Running task 4.0 in stage 3.0 (TID 113)
+23/05/28 13:13:42 INFO CoarseGrainedExecutorBackend: Got assigned task 117
+23/05/28 13:13:42 INFO Executor: Running task 8.0 in stage 3.0 (TID 117)
+23/05/28 13:13:42 INFO CoarseGrainedExecutorBackend: Got assigned task 121
+23/05/28 13:13:42 INFO Executor: Running task 12.0 in stage 3.0 (TID 121)
+23/05/28 13:13:42 INFO CoarseGrainedExecutorBackend: Got assigned task 125
+23/05/28 13:13:42 INFO Executor: Running task 15.0 in stage 3.0 (TID 125)
+23/05/28 13:13:42 INFO TorrentBroadcast: Started reading broadcast variable 4 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:13:42 INFO TransportClientFactory: Successfully created connection to /192.168.1.45:43063 after 13 ms (0 ms spent in bootstraps)
+23/05/28 13:13:42 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 8.2 KiB, free 1430.1 MiB)
+23/05/28 13:13:42 INFO TorrentBroadcast: Reading broadcast variable 4 took 92 ms
+23/05/28 13:13:42 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 16.4 KiB, free 1430.1 MiB)
+23/05/28 13:13:42 INFO BlockManager: Found block rdd_4_15 locally
+23/05/28 13:13:42 INFO BlockManager: Found block rdd_4_4 locally
+23/05/28 13:13:42 INFO BlockManager: Found block rdd_4_8 locally
+23/05/28 13:13:42 INFO BlockManager: Found block rdd_4_12 locally
+23/05/28 13:13:43 INFO Executor: Finished task 15.0 in stage 3.0 (TID 125). 1760 bytes result sent to driver
+23/05/28 13:13:43 INFO Executor: Finished task 4.0 in stage 3.0 (TID 113). 1717 bytes result sent to driver
+23/05/28 13:13:43 INFO Executor: Finished task 12.0 in stage 3.0 (TID 121). 1760 bytes result sent to driver
+23/05/28 13:13:43 INFO Executor: Finished task 8.0 in stage 3.0 (TID 117). 1760 bytes result sent to driver
+23/05/28 13:13:43 INFO CoarseGrainedExecutorBackend: Got assigned task 141
+23/05/28 13:13:43 INFO Executor: Running task 36.0 in stage 3.0 (TID 141)
+23/05/28 13:13:43 INFO CoarseGrainedExecutorBackend: Got assigned task 142
+23/05/28 13:13:43 INFO Executor: Running task 37.0 in stage 3.0 (TID 142)
+23/05/28 13:13:43 INFO BlockManager: Found block rdd_4_36 locally
+23/05/28 13:13:43 INFO BlockManager: Found block rdd_4_37 locally
+23/05/28 13:13:43 INFO CoarseGrainedExecutorBackend: Got assigned task 144
+23/05/28 13:13:43 INFO Executor: Running task 39.0 in stage 3.0 (TID 144)
+23/05/28 13:13:43 INFO BlockManager: Found block rdd_4_39 locally
+23/05/28 13:13:43 INFO CoarseGrainedExecutorBackend: Got assigned task 145
+23/05/28 13:13:43 INFO Executor: Running task 40.0 in stage 3.0 (TID 145)
+23/05/28 13:13:43 INFO BlockManager: Found block rdd_4_40 locally
+23/05/28 13:13:43 INFO Executor: Finished task 36.0 in stage 3.0 (TID 141). 1717 bytes result sent to driver
+23/05/28 13:13:43 INFO CoarseGrainedExecutorBackend: Got assigned task 157
+23/05/28 13:13:43 INFO Executor: Running task 52.0 in stage 3.0 (TID 157)
+23/05/28 13:13:43 INFO Executor: Finished task 40.0 in stage 3.0 (TID 145). 1717 bytes result sent to driver
+23/05/28 13:13:43 INFO Executor: Finished task 39.0 in stage 3.0 (TID 144). 1717 bytes result sent to driver
+23/05/28 13:13:43 INFO BlockManager: Found block rdd_4_52 locally
+23/05/28 13:13:43 INFO Executor: Finished task 37.0 in stage 3.0 (TID 142). 1717 bytes result sent to driver
+23/05/28 13:13:43 INFO CoarseGrainedExecutorBackend: Got assigned task 159
+23/05/28 13:13:43 INFO Executor: Running task 53.0 in stage 3.0 (TID 159)
+23/05/28 13:13:43 INFO BlockManager: Found block rdd_4_53 locally
+23/05/28 13:13:43 INFO Executor: Finished task 52.0 in stage 3.0 (TID 157). 1717 bytes result sent to driver
+23/05/28 13:13:43 INFO CoarseGrainedExecutorBackend: Got assigned task 160
+23/05/28 13:13:43 INFO Executor: Running task 54.0 in stage 3.0 (TID 160)
+23/05/28 13:13:43 INFO CoarseGrainedExecutorBackend: Got assigned task 162
+23/05/28 13:13:43 INFO Executor: Running task 56.0 in stage 3.0 (TID 162)
+23/05/28 13:13:43 INFO BlockManager: Found block rdd_4_54 locally
+23/05/28 13:13:43 INFO BlockManager: Found block rdd_4_56 locally
+23/05/28 13:13:43 INFO CoarseGrainedExecutorBackend: Got assigned task 167
+23/05/28 13:13:43 INFO Executor: Running task 68.0 in stage 3.0 (TID 167)
+23/05/28 13:13:43 INFO BlockManager: Found block rdd_4_68 locally
+23/05/28 13:13:43 INFO Executor: Finished task 53.0 in stage 3.0 (TID 159). 1717 bytes result sent to driver
+23/05/28 13:13:43 INFO CoarseGrainedExecutorBackend: Got assigned task 172
+23/05/28 13:13:43 INFO Executor: Running task 69.0 in stage 3.0 (TID 172)
+23/05/28 13:13:43 INFO BlockManager: Found block rdd_4_69 locally
+23/05/28 13:13:43 INFO Executor: Finished task 56.0 in stage 3.0 (TID 162). 1803 bytes result sent to driver
+23/05/28 13:13:43 INFO Executor: Finished task 54.0 in stage 3.0 (TID 160). 1760 bytes result sent to driver
+23/05/28 13:13:43 INFO CoarseGrainedExecutorBackend: Got assigned task 181
+23/05/28 13:13:43 INFO Executor: Running task 70.0 in stage 3.0 (TID 181)
+23/05/28 13:13:43 INFO CoarseGrainedExecutorBackend: Got assigned task 182
+23/05/28 13:13:43 INFO BlockManager: Found block rdd_4_70 locally
+23/05/28 13:13:43 INFO Executor: Running task 74.0 in stage 3.0 (TID 182)
+23/05/28 13:13:43 INFO BlockManager: Found block rdd_4_74 locally
+23/05/28 13:13:43 INFO Executor: Finished task 68.0 in stage 3.0 (TID 167). 1760 bytes result sent to driver
+23/05/28 13:13:43 INFO CoarseGrainedExecutorBackend: Got assigned task 184
+23/05/28 13:13:43 INFO Executor: Running task 77.0 in stage 3.0 (TID 184)
+23/05/28 13:13:43 INFO BlockManager: Found block rdd_4_77 locally
+23/05/28 13:13:43 INFO Executor: Finished task 69.0 in stage 3.0 (TID 172). 1760 bytes result sent to driver
+23/05/28 13:13:43 INFO CoarseGrainedExecutorBackend: Got assigned task 193
+23/05/28 13:13:43 INFO Executor: Running task 82.0 in stage 3.0 (TID 193)
+23/05/28 13:13:43 INFO BlockManager: Found block rdd_4_82 locally
+23/05/28 13:13:43 INFO Executor: Finished task 70.0 in stage 3.0 (TID 181). 1717 bytes result sent to driver
+23/05/28 13:13:43 INFO CoarseGrainedExecutorBackend: Got assigned task 196
+23/05/28 13:13:43 INFO Executor: Finished task 77.0 in stage 3.0 (TID 184). 1717 bytes result sent to driver
+23/05/28 13:13:43 INFO Executor: Running task 85.0 in stage 3.0 (TID 196)
+23/05/28 13:13:43 INFO Executor: Finished task 74.0 in stage 3.0 (TID 182). 1717 bytes result sent to driver
+23/05/28 13:13:43 INFO BlockManager: Found block rdd_4_85 locally
+23/05/28 13:13:43 INFO CoarseGrainedExecutorBackend: Got assigned task 199
+23/05/28 13:13:43 INFO Executor: Running task 96.0 in stage 3.0 (TID 199)
+23/05/28 13:13:43 INFO CoarseGrainedExecutorBackend: Got assigned task 200
+23/05/28 13:13:43 INFO Executor: Running task 98.0 in stage 3.0 (TID 200)
+23/05/28 13:13:43 INFO BlockManager: Found block rdd_4_96 locally
+23/05/28 13:13:43 INFO BlockManager: Found block rdd_4_98 locally
+23/05/28 13:13:44 INFO Executor: Finished task 96.0 in stage 3.0 (TID 199). 1760 bytes result sent to driver
+23/05/28 13:13:44 INFO Executor: Finished task 82.0 in stage 3.0 (TID 193). 1803 bytes result sent to driver
+23/05/28 13:13:44 INFO CoarseGrainedExecutorBackend: Got assigned task 210
+23/05/28 13:13:44 INFO Executor: Running task 100.0 in stage 3.0 (TID 210)
+23/05/28 13:13:44 INFO BlockManager: Found block rdd_4_100 locally
+23/05/28 13:13:44 INFO Executor: Finished task 85.0 in stage 3.0 (TID 196). 1760 bytes result sent to driver
+23/05/28 13:13:44 INFO Executor: Finished task 98.0 in stage 3.0 (TID 200). 1760 bytes result sent to driver
+23/05/28 13:13:44 INFO Executor: Finished task 100.0 in stage 3.0 (TID 210). 1717 bytes result sent to driver
+23/05/28 13:13:44 INFO CoarseGrainedExecutorBackend: Got assigned task 222
+23/05/28 13:13:44 INFO CoarseGrainedExecutorBackend: Got assigned task 226
+23/05/28 13:13:44 INFO Executor: Running task 2.0 in stage 4.0 (TID 222)
+23/05/28 13:13:44 INFO Executor: Running task 6.0 in stage 4.0 (TID 226)
+23/05/28 13:13:44 INFO MapOutputTrackerWorker: Updating epoch to 1 and clearing cache
+23/05/28 13:13:44 INFO TorrentBroadcast: Started reading broadcast variable 5 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:13:44 INFO CoarseGrainedExecutorBackend: Got assigned task 230
+23/05/28 13:13:44 INFO Executor: Running task 10.0 in stage 4.0 (TID 230)
+23/05/28 13:13:44 INFO CoarseGrainedExecutorBackend: Got assigned task 234
+23/05/28 13:13:44 INFO Executor: Running task 14.0 in stage 4.0 (TID 234)
+23/05/28 13:13:44 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 4.5 KiB, free 1430.1 MiB)
+23/05/28 13:13:44 INFO TorrentBroadcast: Reading broadcast variable 5 took 53 ms
+23/05/28 13:13:44 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 10.1 KiB, free 1430.1 MiB)
+23/05/28 13:13:44 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+23/05/28 13:13:44 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+23/05/28 13:13:44 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+23/05/28 13:13:44 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 0, fetching them
+23/05/28 13:13:44 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@192.168.1.45:45441)
+23/05/28 13:13:44 INFO MapOutputTrackerWorker: Got the map output locations
+23/05/28 13:13:44 INFO ShuffleBlockFetcherIterator: Getting 109 (248.0 KiB) non-empty blocks including 22 (52.3 KiB) local and 28 (63.0 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (132.7 KiB) remote blocks
+23/05/28 13:13:44 INFO ShuffleBlockFetcherIterator: Getting 109 (248.2 KiB) non-empty blocks including 22 (52.0 KiB) local and 28 (63.0 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (133.1 KiB) remote blocks
+23/05/28 13:13:44 INFO ShuffleBlockFetcherIterator: Getting 109 (247.7 KiB) non-empty blocks including 22 (52.0 KiB) local and 28 (62.8 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (132.9 KiB) remote blocks
+23/05/28 13:13:44 INFO ShuffleBlockFetcherIterator: Getting 109 (248.4 KiB) non-empty blocks including 22 (52.5 KiB) local and 28 (63.0 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (132.9 KiB) remote blocks
+23/05/28 13:13:44 INFO TransportClientFactory: Successfully created connection to /192.168.1.45:40565 after 24 ms (0 ms spent in bootstraps)
+23/05/28 13:13:44 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 72 ms
+23/05/28 13:13:44 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 72 ms
+23/05/28 13:13:44 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 73 ms
+23/05/28 13:13:44 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 78 ms
+23/05/28 13:13:45 INFO Executor: Finished task 6.0 in stage 4.0 (TID 226). 2644 bytes result sent to driver
+23/05/28 13:13:45 INFO CoarseGrainedExecutorBackend: Got assigned task 244
+23/05/28 13:13:45 INFO Executor: Running task 24.0 in stage 4.0 (TID 244)
+23/05/28 13:13:45 INFO ShuffleBlockFetcherIterator: Getting 109 (247.9 KiB) non-empty blocks including 22 (52.0 KiB) local and 28 (63.0 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (132.8 KiB) remote blocks
+23/05/28 13:13:45 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 5 ms
+23/05/28 13:13:46 INFO Executor: Finished task 10.0 in stage 4.0 (TID 230). 2644 bytes result sent to driver
+23/05/28 13:13:46 INFO Executor: Finished task 14.0 in stage 4.0 (TID 234). 2601 bytes result sent to driver
+23/05/28 13:13:46 INFO Executor: Finished task 2.0 in stage 4.0 (TID 222). 2644 bytes result sent to driver
+23/05/28 13:13:46 INFO CoarseGrainedExecutorBackend: Got assigned task 245
+23/05/28 13:13:46 INFO Executor: Running task 25.0 in stage 4.0 (TID 245)
+23/05/28 13:13:46 INFO CoarseGrainedExecutorBackend: Got assigned task 246
+23/05/28 13:13:46 INFO Executor: Running task 26.0 in stage 4.0 (TID 246)
+23/05/28 13:13:46 INFO ShuffleBlockFetcherIterator: Getting 109 (247.7 KiB) non-empty blocks including 22 (52.0 KiB) local and 28 (62.8 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (132.9 KiB) remote blocks
+23/05/28 13:13:46 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 3 ms
+23/05/28 13:13:46 INFO ShuffleBlockFetcherIterator: Getting 109 (247.7 KiB) non-empty blocks including 22 (52.0 KiB) local and 28 (62.8 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (132.9 KiB) remote blocks
+23/05/28 13:13:46 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 5 ms
+23/05/28 13:13:46 INFO CoarseGrainedExecutorBackend: Got assigned task 255
+23/05/28 13:13:46 INFO Executor: Running task 35.0 in stage 4.0 (TID 255)
+23/05/28 13:13:46 INFO ShuffleBlockFetcherIterator: Getting 109 (248.2 KiB) non-empty blocks including 22 (52.0 KiB) local and 28 (63.0 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (133.1 KiB) remote blocks
+23/05/28 13:13:46 INFO Executor: Finished task 24.0 in stage 4.0 (TID 244). 2644 bytes result sent to driver
+23/05/28 13:13:46 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 10 ms
+23/05/28 13:13:46 INFO CoarseGrainedExecutorBackend: Got assigned task 259
+23/05/28 13:13:46 INFO Executor: Running task 39.0 in stage 4.0 (TID 259)
+23/05/28 13:13:46 INFO ShuffleBlockFetcherIterator: Getting 109 (247.9 KiB) non-empty blocks including 22 (52.3 KiB) local and 28 (62.8 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (132.9 KiB) remote blocks
+23/05/28 13:13:46 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 2 ms
+23/05/28 13:13:46 INFO Executor: Finished task 25.0 in stage 4.0 (TID 245). 2644 bytes result sent to driver
+23/05/28 13:13:47 INFO Executor: Finished task 26.0 in stage 4.0 (TID 246). 2644 bytes result sent to driver
+23/05/28 13:13:47 INFO CoarseGrainedExecutorBackend: Got assigned task 265
+23/05/28 13:13:47 INFO Executor: Running task 45.0 in stage 4.0 (TID 265)
+23/05/28 13:13:47 INFO ShuffleBlockFetcherIterator: Getting 109 (247.3 KiB) non-empty blocks including 22 (52.0 KiB) local and 28 (62.4 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (132.9 KiB) remote blocks
+23/05/28 13:13:47 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 3 ms
+23/05/28 13:13:47 INFO CoarseGrainedExecutorBackend: Got assigned task 269
+23/05/28 13:13:47 INFO Executor: Running task 49.0 in stage 4.0 (TID 269)
+23/05/28 13:13:47 INFO ShuffleBlockFetcherIterator: Getting 109 (247.7 KiB) non-empty blocks including 22 (51.9 KiB) local and 28 (63.0 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (132.9 KiB) remote blocks
+23/05/28 13:13:47 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 4 ms
+23/05/28 13:13:47 INFO Executor: Finished task 35.0 in stage 4.0 (TID 255). 2644 bytes result sent to driver
+23/05/28 13:13:47 INFO Executor: Finished task 39.0 in stage 4.0 (TID 259). 2644 bytes result sent to driver
+23/05/28 13:13:47 INFO CoarseGrainedExecutorBackend: Got assigned task 273
+23/05/28 13:13:47 INFO Executor: Running task 53.0 in stage 4.0 (TID 273)
+23/05/28 13:13:47 INFO ShuffleBlockFetcherIterator: Getting 109 (247.9 KiB) non-empty blocks including 22 (51.8 KiB) local and 28 (62.8 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (133.3 KiB) remote blocks
+23/05/28 13:13:47 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 3 ms
+23/05/28 13:13:47 INFO CoarseGrainedExecutorBackend: Got assigned task 279
+23/05/28 13:13:47 INFO Executor: Running task 59.0 in stage 4.0 (TID 279)
+23/05/28 13:13:47 INFO ShuffleBlockFetcherIterator: Getting 109 (247.9 KiB) non-empty blocks including 22 (52.0 KiB) local and 28 (62.8 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (133.0 KiB) remote blocks
+23/05/28 13:13:47 INFO Executor: Finished task 45.0 in stage 4.0 (TID 265). 2644 bytes result sent to driver
+23/05/28 13:13:47 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 14 ms
+23/05/28 13:13:47 INFO Executor: Finished task 49.0 in stage 4.0 (TID 269). 2644 bytes result sent to driver
+23/05/28 13:13:47 INFO CoarseGrainedExecutorBackend: Got assigned task 285
+23/05/28 13:13:47 INFO Executor: Running task 65.0 in stage 4.0 (TID 285)
+23/05/28 13:13:48 INFO ShuffleBlockFetcherIterator: Getting 109 (247.5 KiB) non-empty blocks including 22 (51.9 KiB) local and 28 (62.8 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (132.8 KiB) remote blocks
+23/05/28 13:13:48 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 3 ms
+23/05/28 13:13:48 INFO Executor: Finished task 53.0 in stage 4.0 (TID 273). 2644 bytes result sent to driver
+23/05/28 13:13:48 INFO CoarseGrainedExecutorBackend: Got assigned task 289
+23/05/28 13:13:48 INFO Executor: Running task 69.0 in stage 4.0 (TID 289)
+23/05/28 13:13:48 INFO ShuffleBlockFetcherIterator: Getting 109 (248.2 KiB) non-empty blocks including 22 (52.5 KiB) local and 28 (62.8 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (132.9 KiB) remote blocks
+23/05/28 13:13:48 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 3 ms
+23/05/28 13:13:48 INFO Executor: Finished task 59.0 in stage 4.0 (TID 279). 2644 bytes result sent to driver
+23/05/28 13:13:48 INFO CoarseGrainedExecutorBackend: Got assigned task 293
+23/05/28 13:13:48 INFO Executor: Running task 73.0 in stage 4.0 (TID 293)
+23/05/28 13:13:48 INFO ShuffleBlockFetcherIterator: Getting 109 (248.2 KiB) non-empty blocks including 22 (52.5 KiB) local and 28 (62.8 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (132.9 KiB) remote blocks
+23/05/28 13:13:48 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 4 ms
+23/05/28 13:13:48 INFO CoarseGrainedExecutorBackend: Got assigned task 296
+23/05/28 13:13:48 INFO Executor: Running task 76.0 in stage 4.0 (TID 296)
+23/05/28 13:13:48 INFO ShuffleBlockFetcherIterator: Getting 109 (248.7 KiB) non-empty blocks including 22 (52.3 KiB) local and 28 (62.8 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (133.6 KiB) remote blocks
+23/05/28 13:13:48 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 3 ms
+23/05/28 13:13:48 INFO Executor: Finished task 65.0 in stage 4.0 (TID 285). 2644 bytes result sent to driver
+23/05/28 13:13:48 INFO CoarseGrainedExecutorBackend: Got assigned task 303
+23/05/28 13:13:48 INFO Executor: Running task 83.0 in stage 4.0 (TID 303)
+23/05/28 13:13:48 INFO ShuffleBlockFetcherIterator: Getting 109 (247.5 KiB) non-empty blocks including 22 (51.8 KiB) local and 28 (63.0 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (132.7 KiB) remote blocks
+23/05/28 13:13:48 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 4 ms
+23/05/28 13:13:48 INFO Executor: Finished task 69.0 in stage 4.0 (TID 289). 2644 bytes result sent to driver
+23/05/28 13:13:48 INFO Executor: Finished task 73.0 in stage 4.0 (TID 293). 2644 bytes result sent to driver
+23/05/28 13:13:49 INFO CoarseGrainedExecutorBackend: Got assigned task 307
+23/05/28 13:13:49 INFO Executor: Running task 87.0 in stage 4.0 (TID 307)
+23/05/28 13:13:49 INFO ShuffleBlockFetcherIterator: Getting 109 (248.3 KiB) non-empty blocks including 22 (52.3 KiB) local and 28 (63.0 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (133.0 KiB) remote blocks
+23/05/28 13:13:49 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 3 ms
+23/05/28 13:13:49 INFO Executor: Finished task 76.0 in stage 4.0 (TID 296). 2644 bytes result sent to driver
+23/05/28 13:13:49 INFO CoarseGrainedExecutorBackend: Got assigned task 312
+23/05/28 13:13:49 INFO Executor: Running task 92.0 in stage 4.0 (TID 312)
+23/05/28 13:13:49 INFO ShuffleBlockFetcherIterator: Getting 109 (248.1 KiB) non-empty blocks including 22 (52.3 KiB) local and 28 (62.8 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (133.0 KiB) remote blocks
+23/05/28 13:13:49 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 2 ms
+23/05/28 13:13:49 INFO CoarseGrainedExecutorBackend: Got assigned task 316
+23/05/28 13:13:49 INFO Executor: Running task 96.0 in stage 4.0 (TID 316)
+23/05/28 13:13:49 INFO ShuffleBlockFetcherIterator: Getting 109 (247.7 KiB) non-empty blocks including 22 (51.8 KiB) local and 28 (63.0 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (132.9 KiB) remote blocks
+23/05/28 13:13:49 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 3 ms
+23/05/28 13:13:49 INFO Executor: Finished task 83.0 in stage 4.0 (TID 303). 2644 bytes result sent to driver
+23/05/28 13:13:49 INFO Executor: Finished task 87.0 in stage 4.0 (TID 307). 2644 bytes result sent to driver
+23/05/28 13:13:50 INFO Executor: Finished task 92.0 in stage 4.0 (TID 312). 2644 bytes result sent to driver
+23/05/28 13:13:50 INFO Executor: Finished task 96.0 in stage 4.0 (TID 316). 2644 bytes result sent to driver
+23/05/28 13:13:50 INFO CoarseGrainedExecutorBackend: Got assigned task 321
+23/05/28 13:13:50 INFO Executor: Running task 4.0 in stage 5.0 (TID 321)
+23/05/28 13:13:50 INFO TorrentBroadcast: Started reading broadcast variable 8 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:13:50 INFO CoarseGrainedExecutorBackend: Got assigned task 325
+23/05/28 13:13:50 INFO Executor: Running task 8.0 in stage 5.0 (TID 325)
+23/05/28 13:13:50 INFO CoarseGrainedExecutorBackend: Got assigned task 329
+23/05/28 13:13:50 INFO Executor: Running task 12.0 in stage 5.0 (TID 329)
+23/05/28 13:13:50 INFO CoarseGrainedExecutorBackend: Got assigned task 333
+23/05/28 13:13:50 INFO Executor: Running task 15.0 in stage 5.0 (TID 333)
+23/05/28 13:13:50 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 33.6 KiB, free 1430.1 MiB)
+23/05/28 13:13:50 INFO TorrentBroadcast: Reading broadcast variable 8 took 108 ms
+23/05/28 13:13:50 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 41.2 KiB, free 1430.0 MiB)
+23/05/28 13:13:50 INFO BlockManager: Found block rdd_4_4 locally
+23/05/28 13:13:50 INFO BlockManager: Found block rdd_4_15 locally
+23/05/28 13:13:50 INFO BlockManager: Found block rdd_4_12 locally
+23/05/28 13:13:50 INFO BlockManager: Found block rdd_4_8 locally
+23/05/28 13:13:50 INFO MemoryStore: Block rdd_14_12 stored as values in memory (estimated size 6.0 MiB, free 1424.1 MiB)
+23/05/28 13:13:50 INFO MemoryStore: Block rdd_14_8 stored as values in memory (estimated size 6.0 MiB, free 1418.1 MiB)
+23/05/28 13:13:50 INFO MemoryStore: Block rdd_14_15 stored as values in memory (estimated size 6.0 MiB, free 1412.2 MiB)
+23/05/28 13:13:50 INFO TorrentBroadcast: Started reading broadcast variable 7 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:13:51 INFO MemoryStore: Block rdd_14_4 stored as values in memory (estimated size 6.0 MiB, free 1406.1 MiB)
+23/05/28 13:13:51 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 101.0 B, free 1406.1 MiB)
+23/05/28 13:13:51 INFO TorrentBroadcast: Reading broadcast variable 7 took 74 ms
+23/05/28 13:13:51 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 40.0 B, free 1406.1 MiB)
+23/05/28 13:13:51 INFO TorrentBroadcast: Started reading broadcast variable 6 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:13:51 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 33.5 KiB, free 1406.1 MiB)
+23/05/28 13:13:51 INFO TorrentBroadcast: Reading broadcast variable 6 took 62 ms
+23/05/28 13:13:51 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 89.5 KiB, free 1406.0 MiB)
+23/05/28 13:13:51 INFO Executor: Finished task 4.0 in stage 5.0 (TID 321). 1769 bytes result sent to driver
+23/05/28 13:13:51 INFO Executor: Finished task 8.0 in stage 5.0 (TID 325). 1812 bytes result sent to driver
+23/05/28 13:13:51 INFO Executor: Finished task 15.0 in stage 5.0 (TID 333). 1812 bytes result sent to driver
+23/05/28 13:13:51 INFO Executor: Finished task 12.0 in stage 5.0 (TID 329). 1769 bytes result sent to driver
+23/05/28 13:13:51 INFO CoarseGrainedExecutorBackend: Got assigned task 346
+23/05/28 13:13:51 INFO Executor: Running task 36.0 in stage 5.0 (TID 346)
+23/05/28 13:13:51 INFO CoarseGrainedExecutorBackend: Got assigned task 347
+23/05/28 13:13:51 INFO Executor: Running task 37.0 in stage 5.0 (TID 347)
+23/05/28 13:13:51 INFO CoarseGrainedExecutorBackend: Got assigned task 348
+23/05/28 13:13:51 INFO Executor: Running task 39.0 in stage 5.0 (TID 348)
+23/05/28 13:13:51 INFO CoarseGrainedExecutorBackend: Got assigned task 349
+23/05/28 13:13:51 INFO Executor: Running task 40.0 in stage 5.0 (TID 349)
+23/05/28 13:13:51 INFO BlockManager: Found block rdd_4_36 locally
+23/05/28 13:13:51 INFO BlockManager: Found block rdd_4_37 locally
+23/05/28 13:13:51 INFO BlockManager: Found block rdd_4_40 locally
+23/05/28 13:13:51 INFO BlockManager: Found block rdd_4_39 locally
+23/05/28 13:13:51 INFO MemoryStore: Block rdd_14_36 stored as values in memory (estimated size 6.0 MiB, free 1400.1 MiB)
+23/05/28 13:13:51 INFO MemoryStore: Block rdd_14_40 stored as values in memory (estimated size 6.0 MiB, free 1394.1 MiB)
+23/05/28 13:13:51 INFO Executor: Finished task 36.0 in stage 5.0 (TID 346). 1769 bytes result sent to driver
+23/05/28 13:13:51 INFO MemoryStore: Block rdd_14_37 stored as values in memory (estimated size 5.9 MiB, free 1382.3 MiB)
+23/05/28 13:13:51 INFO Executor: Finished task 40.0 in stage 5.0 (TID 349). 1769 bytes result sent to driver
+23/05/28 13:13:51 INFO MemoryStore: Block rdd_14_39 stored as values in memory (estimated size 5.9 MiB, free 1388.2 MiB)
+23/05/28 13:13:51 INFO CoarseGrainedExecutorBackend: Got assigned task 364
+23/05/28 13:13:51 INFO Executor: Running task 52.0 in stage 5.0 (TID 364)
+23/05/28 13:13:51 INFO CoarseGrainedExecutorBackend: Got assigned task 365
+23/05/28 13:13:51 INFO BlockManager: Found block rdd_4_52 locally
+23/05/28 13:13:51 INFO Executor: Finished task 37.0 in stage 5.0 (TID 347). 1769 bytes result sent to driver
+23/05/28 13:13:51 INFO Executor: Running task 53.0 in stage 5.0 (TID 365)
+23/05/28 13:13:51 INFO CoarseGrainedExecutorBackend: Got assigned task 366
+23/05/28 13:13:51 INFO Executor: Running task 54.0 in stage 5.0 (TID 366)
+23/05/28 13:13:51 INFO BlockManager: Found block rdd_4_53 locally
+23/05/28 13:13:51 INFO Executor: Finished task 39.0 in stage 5.0 (TID 348). 1769 bytes result sent to driver
+23/05/28 13:13:51 INFO BlockManager: Found block rdd_4_54 locally
+23/05/28 13:13:51 INFO CoarseGrainedExecutorBackend: Got assigned task 374
+23/05/28 13:13:51 INFO Executor: Running task 56.0 in stage 5.0 (TID 374)
+23/05/28 13:13:51 INFO BlockManager: Found block rdd_4_56 locally
+23/05/28 13:13:52 INFO MemoryStore: Block rdd_14_52 stored as values in memory (estimated size 6.0 MiB, free 1376.3 MiB)
+23/05/28 13:13:52 INFO MemoryStore: Block rdd_14_54 stored as values in memory (estimated size 6.0 MiB, free 1370.3 MiB)
+23/05/28 13:13:52 INFO MemoryStore: Block rdd_14_53 stored as values in memory (estimated size 6.0 MiB, free 1364.3 MiB)
+23/05/28 13:13:52 INFO Executor: Finished task 52.0 in stage 5.0 (TID 364). 1769 bytes result sent to driver
+23/05/28 13:13:52 INFO CoarseGrainedExecutorBackend: Got assigned task 386
+23/05/28 13:13:52 INFO Executor: Running task 68.0 in stage 5.0 (TID 386)
+23/05/28 13:13:52 INFO Executor: Finished task 54.0 in stage 5.0 (TID 366). 1769 bytes result sent to driver
+23/05/28 13:13:52 INFO BlockManager: Found block rdd_4_68 locally
+23/05/28 13:13:52 INFO Executor: Finished task 53.0 in stage 5.0 (TID 365). 1769 bytes result sent to driver
+23/05/28 13:13:52 INFO MemoryStore: Block rdd_14_56 stored as values in memory (estimated size 5.9 MiB, free 1358.4 MiB)
+23/05/28 13:13:52 INFO CoarseGrainedExecutorBackend: Got assigned task 389
+23/05/28 13:13:52 INFO Executor: Running task 69.0 in stage 5.0 (TID 389)
+23/05/28 13:13:52 INFO CoarseGrainedExecutorBackend: Got assigned task 390
+23/05/28 13:13:52 INFO Executor: Running task 70.0 in stage 5.0 (TID 390)
+23/05/28 13:13:52 INFO BlockManager: Found block rdd_4_70 locally
+23/05/28 13:13:52 INFO Executor: Finished task 56.0 in stage 5.0 (TID 374). 1769 bytes result sent to driver
+23/05/28 13:13:52 INFO BlockManager: Found block rdd_4_69 locally
+23/05/28 13:13:52 INFO CoarseGrainedExecutorBackend: Got assigned task 394
+23/05/28 13:13:52 INFO Executor: Running task 74.0 in stage 5.0 (TID 394)
+23/05/28 13:13:52 INFO BlockManager: Found block rdd_4_74 locally
+23/05/28 13:13:52 INFO MemoryStore: Block rdd_14_68 stored as values in memory (estimated size 6.0 MiB, free 1352.4 MiB)
+23/05/28 13:13:52 INFO MemoryStore: Block rdd_14_69 stored as values in memory (estimated size 6.0 MiB, free 1346.5 MiB)
+23/05/28 13:13:52 INFO MemoryStore: Block rdd_14_70 stored as values in memory (estimated size 6.0 MiB, free 1340.5 MiB)
+23/05/28 13:13:52 INFO Executor: Finished task 70.0 in stage 5.0 (TID 390). 1726 bytes result sent to driver
+23/05/28 13:13:52 INFO Executor: Finished task 68.0 in stage 5.0 (TID 386). 1726 bytes result sent to driver
+23/05/28 13:13:52 INFO Executor: Finished task 69.0 in stage 5.0 (TID 389). 1726 bytes result sent to driver
+23/05/28 13:13:52 INFO CoarseGrainedExecutorBackend: Got assigned task 404
+23/05/28 13:13:52 INFO Executor: Running task 77.0 in stage 5.0 (TID 404)
+23/05/28 13:13:52 INFO CoarseGrainedExecutorBackend: Got assigned task 405
+23/05/28 13:13:52 INFO Executor: Running task 82.0 in stage 5.0 (TID 405)
+23/05/28 13:13:52 INFO CoarseGrainedExecutorBackend: Got assigned task 406
+23/05/28 13:13:52 INFO Executor: Running task 85.0 in stage 5.0 (TID 406)
+23/05/28 13:13:52 INFO BlockManager: Found block rdd_4_77 locally
+23/05/28 13:13:52 INFO BlockManager: Found block rdd_4_85 locally
+23/05/28 13:13:52 INFO MemoryStore: Block rdd_14_74 stored as values in memory (estimated size 6.0 MiB, free 1334.6 MiB)
+23/05/28 13:13:52 INFO BlockManager: Found block rdd_4_82 locally
+23/05/28 13:13:52 INFO Executor: Finished task 74.0 in stage 5.0 (TID 394). 1726 bytes result sent to driver
+23/05/28 13:13:52 INFO CoarseGrainedExecutorBackend: Got assigned task 411
+23/05/28 13:13:52 INFO Executor: Running task 96.0 in stage 5.0 (TID 411)
+23/05/28 13:13:52 INFO BlockManager: Found block rdd_4_96 locally
+23/05/28 13:13:52 INFO MemoryStore: Block rdd_14_82 stored as values in memory (estimated size 6.0 MiB, free 1328.6 MiB)
+23/05/28 13:13:52 INFO MemoryStore: Block rdd_14_77 stored as values in memory (estimated size 6.0 MiB, free 1322.6 MiB)
+23/05/28 13:13:52 INFO Executor: Finished task 82.0 in stage 5.0 (TID 405). 1726 bytes result sent to driver
+23/05/28 13:13:52 INFO Executor: Finished task 77.0 in stage 5.0 (TID 404). 1726 bytes result sent to driver
+23/05/28 13:13:52 INFO CoarseGrainedExecutorBackend: Got assigned task 419
+23/05/28 13:13:52 INFO Executor: Running task 98.0 in stage 5.0 (TID 419)
+23/05/28 13:13:52 INFO CoarseGrainedExecutorBackend: Got assigned task 420
+23/05/28 13:13:52 INFO Executor: Running task 100.0 in stage 5.0 (TID 420)
+23/05/28 13:13:52 INFO BlockManager: Found block rdd_4_98 locally
+23/05/28 13:13:52 INFO BlockManager: Found block rdd_4_100 locally
+23/05/28 13:13:52 INFO MemoryStore: Block rdd_14_85 stored as values in memory (estimated size 5.9 MiB, free 1316.7 MiB)
+23/05/28 13:13:52 INFO MemoryStore: Block rdd_14_96 stored as values in memory (estimated size 5.9 MiB, free 1310.8 MiB)
+23/05/28 13:13:53 INFO Executor: Finished task 85.0 in stage 5.0 (TID 406). 1726 bytes result sent to driver
+23/05/28 13:13:53 INFO Executor: Finished task 96.0 in stage 5.0 (TID 411). 1726 bytes result sent to driver
+23/05/28 13:13:53 INFO MemoryStore: Block rdd_14_98 stored as values in memory (estimated size 6.0 MiB, free 1304.8 MiB)
+23/05/28 13:13:53 INFO MemoryStore: Block rdd_14_100 stored as values in memory (estimated size 5.9 MiB, free 1298.9 MiB)
+23/05/28 13:13:53 INFO Executor: Finished task 98.0 in stage 5.0 (TID 419). 1769 bytes result sent to driver
+23/05/28 13:13:53 INFO Executor: Finished task 100.0 in stage 5.0 (TID 420). 1769 bytes result sent to driver
+23/05/28 13:13:53 INFO CoarseGrainedExecutorBackend: Got assigned task 433
+23/05/28 13:13:53 INFO Executor: Running task 4.0 in stage 6.0 (TID 433)
+23/05/28 13:13:53 INFO MapOutputTrackerWorker: Updating epoch to 2 and clearing cache
+23/05/28 13:13:53 INFO TorrentBroadcast: Started reading broadcast variable 9 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:13:53 INFO CoarseGrainedExecutorBackend: Got assigned task 437
+23/05/28 13:13:53 INFO Executor: Running task 8.0 in stage 6.0 (TID 437)
+23/05/28 13:13:53 INFO CoarseGrainedExecutorBackend: Got assigned task 441
+23/05/28 13:13:53 INFO Executor: Running task 12.0 in stage 6.0 (TID 441)
+23/05/28 13:13:53 INFO CoarseGrainedExecutorBackend: Got assigned task 444
+23/05/28 13:13:53 INFO Executor: Running task 15.0 in stage 6.0 (TID 444)
+23/05/28 13:13:53 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 3.8 KiB, free 1298.9 MiB)
+23/05/28 13:13:53 INFO TorrentBroadcast: Reading broadcast variable 9 took 54 ms
+23/05/28 13:13:53 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 6.9 KiB, free 1298.9 MiB)
+23/05/28 13:13:53 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 1, fetching them
+23/05/28 13:13:53 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 1, fetching them
+23/05/28 13:13:53 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 1, fetching them
+23/05/28 13:13:53 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 1, fetching them
+23/05/28 13:13:53 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@192.168.1.45:45441)
+23/05/28 13:13:53 INFO MapOutputTrackerWorker: Got the map output locations
+23/05/28 13:13:53 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:53 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:53 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+23/05/28 13:13:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+23/05/28 13:13:53 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+23/05/28 13:13:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+23/05/28 13:13:53 INFO Executor: Finished task 4.0 in stage 6.0 (TID 433). 1705 bytes result sent to driver
+23/05/28 13:13:53 INFO Executor: Finished task 8.0 in stage 6.0 (TID 437). 1705 bytes result sent to driver
+23/05/28 13:13:53 INFO Executor: Finished task 15.0 in stage 6.0 (TID 444). 1705 bytes result sent to driver
+23/05/28 13:13:53 INFO Executor: Finished task 12.0 in stage 6.0 (TID 441). 1705 bytes result sent to driver
+23/05/28 13:13:53 INFO CoarseGrainedExecutorBackend: Got assigned task 458
+23/05/28 13:13:53 INFO Executor: Running task 29.0 in stage 6.0 (TID 458)
+23/05/28 13:13:53 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+23/05/28 13:13:53 INFO CoarseGrainedExecutorBackend: Got assigned task 460
+23/05/28 13:13:53 INFO Executor: Finished task 29.0 in stage 6.0 (TID 458). 1791 bytes result sent to driver
+23/05/28 13:13:53 INFO Executor: Running task 31.0 in stage 6.0 (TID 460)
+23/05/28 13:13:53 INFO CoarseGrainedExecutorBackend: Got assigned task 461
+23/05/28 13:13:53 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+23/05/28 13:13:53 INFO Executor: Running task 32.0 in stage 6.0 (TID 461)
+23/05/28 13:13:53 INFO Executor: Finished task 31.0 in stage 6.0 (TID 460). 1705 bytes result sent to driver
+23/05/28 13:13:53 INFO CoarseGrainedExecutorBackend: Got assigned task 464
+23/05/28 13:13:53 INFO Executor: Running task 35.0 in stage 6.0 (TID 464)
+23/05/28 13:13:53 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+23/05/28 13:13:53 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:53 INFO Executor: Finished task 32.0 in stage 6.0 (TID 461). 1705 bytes result sent to driver
+23/05/28 13:13:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+23/05/28 13:13:53 INFO Executor: Finished task 35.0 in stage 6.0 (TID 464). 1705 bytes result sent to driver
+23/05/28 13:13:54 INFO CoarseGrainedExecutorBackend: Got assigned task 476
+23/05/28 13:13:54 INFO Executor: Running task 47.0 in stage 6.0 (TID 476)
+23/05/28 13:13:54 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+23/05/28 13:13:54 INFO CoarseGrainedExecutorBackend: Got assigned task 477
+23/05/28 13:13:54 INFO Executor: Running task 48.0 in stage 6.0 (TID 477)
+23/05/28 13:13:54 INFO Executor: Finished task 47.0 in stage 6.0 (TID 476). 1705 bytes result sent to driver
+23/05/28 13:13:54 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+23/05/28 13:13:54 INFO Executor: Finished task 48.0 in stage 6.0 (TID 477). 1705 bytes result sent to driver
+23/05/28 13:13:54 INFO CoarseGrainedExecutorBackend: Got assigned task 488
+23/05/28 13:13:54 INFO Executor: Running task 59.0 in stage 6.0 (TID 488)
+23/05/28 13:13:54 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+23/05/28 13:13:54 INFO Executor: Finished task 59.0 in stage 6.0 (TID 488). 1705 bytes result sent to driver
+23/05/28 13:13:54 INFO CoarseGrainedExecutorBackend: Got assigned task 489
+23/05/28 13:13:54 INFO Executor: Running task 60.0 in stage 6.0 (TID 489)
+23/05/28 13:13:54 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+23/05/28 13:13:54 INFO Executor: Finished task 60.0 in stage 6.0 (TID 489). 1705 bytes result sent to driver
+23/05/28 13:13:54 INFO CoarseGrainedExecutorBackend: Got assigned task 499
+23/05/28 13:13:54 INFO Executor: Running task 70.0 in stage 6.0 (TID 499)
+23/05/28 13:13:54 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+23/05/28 13:13:54 INFO CoarseGrainedExecutorBackend: Got assigned task 502
+23/05/28 13:13:54 INFO Executor: Running task 73.0 in stage 6.0 (TID 502)
+23/05/28 13:13:54 INFO Executor: Finished task 70.0 in stage 6.0 (TID 499). 1791 bytes result sent to driver
+23/05/28 13:13:54 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+23/05/28 13:13:54 INFO Executor: Finished task 73.0 in stage 6.0 (TID 502). 1705 bytes result sent to driver
+23/05/28 13:13:54 INFO CoarseGrainedExecutorBackend: Got assigned task 512
+23/05/28 13:13:54 INFO Executor: Running task 83.0 in stage 6.0 (TID 512)
+23/05/28 13:13:54 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+23/05/28 13:13:54 INFO Executor: Finished task 83.0 in stage 6.0 (TID 512). 1705 bytes result sent to driver
+23/05/28 13:13:54 INFO CoarseGrainedExecutorBackend: Got assigned task 517
+23/05/28 13:13:54 INFO Executor: Running task 88.0 in stage 6.0 (TID 517)
+23/05/28 13:13:54 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+23/05/28 13:13:54 INFO Executor: Finished task 88.0 in stage 6.0 (TID 517). 1705 bytes result sent to driver
+23/05/28 13:13:57 INFO CoarseGrainedExecutorBackend: Got assigned task 539
+23/05/28 13:13:57 INFO Executor: Running task 4.0 in stage 7.0 (TID 539)
+23/05/28 13:13:57 INFO TorrentBroadcast: Started reading broadcast variable 11 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:13:57 INFO CoarseGrainedExecutorBackend: Got assigned task 543
+23/05/28 13:13:57 INFO Executor: Running task 8.0 in stage 7.0 (TID 543)
+23/05/28 13:13:57 INFO CoarseGrainedExecutorBackend: Got assigned task 547
+23/05/28 13:13:57 INFO Executor: Running task 12.0 in stage 7.0 (TID 547)
+23/05/28 13:13:57 INFO CoarseGrainedExecutorBackend: Got assigned task 551
+23/05/28 13:13:57 INFO Executor: Running task 15.0 in stage 7.0 (TID 551)
+23/05/28 13:13:57 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 34.2 KiB, free 1298.9 MiB)
+23/05/28 13:13:57 INFO TorrentBroadcast: Reading broadcast variable 11 took 103 ms
+23/05/28 13:13:57 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 42.5 KiB, free 1298.9 MiB)
+23/05/28 13:13:57 INFO BlockManager: Found block rdd_14_12 locally
+23/05/28 13:13:57 INFO BlockManager: Found block rdd_14_8 locally
+23/05/28 13:13:57 INFO BlockManager: Found block rdd_14_4 locally
+23/05/28 13:13:57 INFO BlockManager: Found block rdd_14_15 locally
+23/05/28 13:13:57 INFO TorrentBroadcast: Started reading broadcast variable 10 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:13:57 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 101.0 B, free 1298.9 MiB)
+23/05/28 13:13:57 INFO TorrentBroadcast: Reading broadcast variable 10 took 33 ms
+23/05/28 13:13:57 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 40.0 B, free 1298.9 MiB)
+23/05/28 13:13:57 INFO Executor: Finished task 12.0 in stage 7.0 (TID 547). 1812 bytes result sent to driver
+23/05/28 13:13:57 INFO Executor: Finished task 8.0 in stage 7.0 (TID 543). 1769 bytes result sent to driver
+23/05/28 13:13:57 INFO Executor: Finished task 15.0 in stage 7.0 (TID 551). 1769 bytes result sent to driver
+23/05/28 13:13:57 INFO CoarseGrainedExecutorBackend: Got assigned task 565
+23/05/28 13:13:57 INFO Executor: Running task 36.0 in stage 7.0 (TID 565)
+23/05/28 13:13:57 INFO Executor: Finished task 4.0 in stage 7.0 (TID 539). 1769 bytes result sent to driver
+23/05/28 13:13:57 INFO CoarseGrainedExecutorBackend: Got assigned task 567
+23/05/28 13:13:57 INFO CoarseGrainedExecutorBackend: Got assigned task 568
+23/05/28 13:13:57 INFO BlockManager: Found block rdd_14_36 locally
+23/05/28 13:13:57 INFO Executor: Running task 39.0 in stage 7.0 (TID 568)
+23/05/28 13:13:57 INFO Executor: Running task 37.0 in stage 7.0 (TID 567)
+23/05/28 13:13:57 INFO BlockManager: Found block rdd_14_39 locally
+23/05/28 13:13:57 INFO CoarseGrainedExecutorBackend: Got assigned task 569
+23/05/28 13:13:57 INFO Executor: Running task 40.0 in stage 7.0 (TID 569)
+23/05/28 13:13:57 INFO BlockManager: Found block rdd_14_37 locally
+23/05/28 13:13:57 INFO BlockManager: Found block rdd_14_40 locally
+23/05/28 13:13:58 INFO Executor: Finished task 40.0 in stage 7.0 (TID 569). 1726 bytes result sent to driver
+23/05/28 13:13:58 INFO CoarseGrainedExecutorBackend: Got assigned task 577
+23/05/28 13:13:58 INFO Executor: Running task 52.0 in stage 7.0 (TID 577)
+23/05/28 13:13:58 INFO BlockManager: Found block rdd_14_52 locally
+23/05/28 13:13:58 INFO Executor: Finished task 37.0 in stage 7.0 (TID 567). 1726 bytes result sent to driver
+23/05/28 13:13:58 INFO CoarseGrainedExecutorBackend: Got assigned task 583
+23/05/28 13:13:58 INFO Executor: Running task 53.0 in stage 7.0 (TID 583)
+23/05/28 13:13:58 INFO Executor: Finished task 36.0 in stage 7.0 (TID 565). 1769 bytes result sent to driver
+23/05/28 13:13:58 INFO Executor: Finished task 39.0 in stage 7.0 (TID 568). 1726 bytes result sent to driver
+23/05/28 13:13:58 INFO BlockManager: Found block rdd_14_53 locally
+23/05/28 13:13:58 INFO Executor: Finished task 52.0 in stage 7.0 (TID 577). 1726 bytes result sent to driver
+23/05/28 13:13:58 INFO CoarseGrainedExecutorBackend: Got assigned task 587
+23/05/28 13:13:58 INFO Executor: Running task 54.0 in stage 7.0 (TID 587)
+23/05/28 13:13:58 INFO CoarseGrainedExecutorBackend: Got assigned task 588
+23/05/28 13:13:58 INFO Executor: Running task 56.0 in stage 7.0 (TID 588)
+23/05/28 13:13:58 INFO BlockManager: Found block rdd_14_54 locally
+23/05/28 13:13:58 INFO BlockManager: Found block rdd_14_56 locally
+23/05/28 13:13:58 INFO CoarseGrainedExecutorBackend: Got assigned task 589
+23/05/28 13:13:58 INFO Executor: Running task 68.0 in stage 7.0 (TID 589)
+23/05/28 13:13:58 INFO BlockManager: Found block rdd_14_68 locally
+23/05/28 13:13:58 INFO Executor: Finished task 53.0 in stage 7.0 (TID 583). 1726 bytes result sent to driver
+23/05/28 13:13:58 INFO Executor: Finished task 56.0 in stage 7.0 (TID 588). 1769 bytes result sent to driver
+23/05/28 13:13:58 INFO Executor: Finished task 54.0 in stage 7.0 (TID 587). 1726 bytes result sent to driver
+23/05/28 13:13:58 INFO CoarseGrainedExecutorBackend: Got assigned task 593
+23/05/28 13:13:58 INFO Executor: Running task 69.0 in stage 7.0 (TID 593)
+23/05/28 13:13:58 INFO CoarseGrainedExecutorBackend: Got assigned task 594
+23/05/28 13:13:58 INFO Executor: Running task 70.0 in stage 7.0 (TID 594)
+23/05/28 13:13:58 INFO CoarseGrainedExecutorBackend: Got assigned task 597
+23/05/28 13:13:58 INFO Executor: Running task 74.0 in stage 7.0 (TID 597)
+23/05/28 13:13:58 INFO BlockManager: Found block rdd_14_69 locally
+23/05/28 13:13:58 INFO BlockManager: Found block rdd_14_70 locally
+23/05/28 13:13:58 INFO BlockManager: Found block rdd_14_74 locally
+23/05/28 13:13:58 INFO Executor: Finished task 68.0 in stage 7.0 (TID 589). 1726 bytes result sent to driver
+23/05/28 13:13:58 INFO CoarseGrainedExecutorBackend: Got assigned task 604
+23/05/28 13:13:58 INFO Executor: Running task 77.0 in stage 7.0 (TID 604)
+23/05/28 13:13:58 INFO BlockManager: Found block rdd_14_77 locally
+23/05/28 13:13:58 INFO Executor: Finished task 69.0 in stage 7.0 (TID 593). 1769 bytes result sent to driver
+23/05/28 13:13:58 INFO CoarseGrainedExecutorBackend: Got assigned task 615
+23/05/28 13:13:58 INFO Executor: Running task 82.0 in stage 7.0 (TID 615)
+23/05/28 13:13:58 INFO Executor: Finished task 70.0 in stage 7.0 (TID 594). 1812 bytes result sent to driver
+23/05/28 13:13:58 INFO BlockManager: Found block rdd_14_82 locally
+23/05/28 13:13:58 INFO Executor: Finished task 77.0 in stage 7.0 (TID 604). 1769 bytes result sent to driver
+23/05/28 13:13:58 INFO Executor: Finished task 74.0 in stage 7.0 (TID 597). 1769 bytes result sent to driver
+23/05/28 13:13:58 INFO CoarseGrainedExecutorBackend: Got assigned task 619
+23/05/28 13:13:58 INFO Executor: Running task 85.0 in stage 7.0 (TID 619)
+23/05/28 13:13:58 INFO CoarseGrainedExecutorBackend: Got assigned task 621
+23/05/28 13:13:58 INFO CoarseGrainedExecutorBackend: Got assigned task 622
+23/05/28 13:13:58 INFO Executor: Running task 96.0 in stage 7.0 (TID 621)
+23/05/28 13:13:58 INFO Executor: Finished task 82.0 in stage 7.0 (TID 615). 1726 bytes result sent to driver
+23/05/28 13:13:58 INFO BlockManager: Found block rdd_14_85 locally
+23/05/28 13:13:58 INFO Executor: Running task 98.0 in stage 7.0 (TID 622)
+23/05/28 13:13:58 INFO BlockManager: Found block rdd_14_96 locally
+23/05/28 13:13:58 INFO BlockManager: Found block rdd_14_98 locally
+23/05/28 13:13:58 INFO CoarseGrainedExecutorBackend: Got assigned task 626
+23/05/28 13:13:58 INFO Executor: Running task 100.0 in stage 7.0 (TID 626)
+23/05/28 13:13:58 INFO BlockManager: Found block rdd_14_100 locally
+23/05/28 13:13:58 INFO Executor: Finished task 96.0 in stage 7.0 (TID 621). 1726 bytes result sent to driver
+23/05/28 13:13:58 INFO Executor: Finished task 85.0 in stage 7.0 (TID 619). 1726 bytes result sent to driver
+23/05/28 13:13:58 INFO Executor: Finished task 98.0 in stage 7.0 (TID 622). 1726 bytes result sent to driver
+23/05/28 13:13:58 INFO Executor: Finished task 100.0 in stage 7.0 (TID 626). 1726 bytes result sent to driver
+23/05/28 13:13:58 INFO CoarseGrainedExecutorBackend: Got assigned task 648
+23/05/28 13:13:58 INFO Executor: Running task 1.0 in stage 8.0 (TID 648)
+23/05/28 13:13:58 INFO MapOutputTrackerWorker: Updating epoch to 3 and clearing cache
+23/05/28 13:13:58 INFO TorrentBroadcast: Started reading broadcast variable 12 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:13:58 INFO CoarseGrainedExecutorBackend: Got assigned task 650
+23/05/28 13:13:58 INFO Executor: Running task 3.0 in stage 8.0 (TID 650)
+23/05/28 13:13:58 INFO CoarseGrainedExecutorBackend: Got assigned task 654
+23/05/28 13:13:58 INFO Executor: Running task 7.0 in stage 8.0 (TID 654)
+23/05/28 13:13:58 INFO CoarseGrainedExecutorBackend: Got assigned task 658
+23/05/28 13:13:58 INFO Executor: Running task 11.0 in stage 8.0 (TID 658)
+23/05/28 13:13:58 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 4.1 KiB, free 1298.9 MiB)
+23/05/28 13:13:58 INFO TorrentBroadcast: Reading broadcast variable 12 took 73 ms
+23/05/28 13:13:58 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 7.7 KiB, free 1298.9 MiB)
+23/05/28 13:13:58 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 2, fetching them
+23/05/28 13:13:58 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 2, fetching them
+23/05/28 13:13:58 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 2, fetching them
+23/05/28 13:13:58 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 2, fetching them
+23/05/28 13:13:58 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@192.168.1.45:45441)
+23/05/28 13:13:58 INFO MapOutputTrackerWorker: Got the map output locations
+23/05/28 13:13:58 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:58 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:58 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:58 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+23/05/28 13:13:58 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+23/05/28 13:13:58 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+23/05/28 13:13:58 INFO ShuffleBlockFetcherIterator: Getting 109 (12.9 MiB) non-empty blocks including 22 (2.6 MiB) local and 28 (3.3 MiB) host-local and 0 (0.0 B) push-merged-local and 59 (7.0 MiB) remote blocks
+23/05/28 13:13:58 INFO Executor: Finished task 11.0 in stage 8.0 (TID 658). 1791 bytes result sent to driver
+23/05/28 13:13:58 INFO Executor: Finished task 7.0 in stage 8.0 (TID 654). 1791 bytes result sent to driver
+23/05/28 13:13:58 INFO Executor: Finished task 3.0 in stage 8.0 (TID 650). 1748 bytes result sent to driver
+23/05/28 13:13:58 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 8 ms
+23/05/28 13:13:58 INFO CoarseGrainedExecutorBackend: Got assigned task 678
+23/05/28 13:13:58 INFO CoarseGrainedExecutorBackend: Got assigned task 681
+23/05/28 13:13:58 INFO Executor: Running task 31.0 in stage 8.0 (TID 678)
+23/05/28 13:13:58 INFO Executor: Running task 34.0 in stage 8.0 (TID 681)
+23/05/28 13:13:58 INFO CoarseGrainedExecutorBackend: Got assigned task 682
+23/05/28 13:13:58 INFO Executor: Running task 35.0 in stage 8.0 (TID 682)
+23/05/28 13:13:58 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:58 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+23/05/28 13:13:58 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:58 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+23/05/28 13:13:58 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:58 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+23/05/28 13:13:58 INFO Executor: Finished task 31.0 in stage 8.0 (TID 678). 1705 bytes result sent to driver
+23/05/28 13:13:58 INFO Executor: Finished task 34.0 in stage 8.0 (TID 681). 1705 bytes result sent to driver
+23/05/28 13:13:58 INFO Executor: Finished task 35.0 in stage 8.0 (TID 682). 1705 bytes result sent to driver
+23/05/28 13:13:59 INFO CoarseGrainedExecutorBackend: Got assigned task 708
+23/05/28 13:13:59 INFO Executor: Running task 61.0 in stage 8.0 (TID 708)
+23/05/28 13:13:59 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:59 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 3 ms
+23/05/28 13:13:59 INFO Executor: Finished task 61.0 in stage 8.0 (TID 708). 1705 bytes result sent to driver
+23/05/28 13:13:59 INFO CoarseGrainedExecutorBackend: Got assigned task 713
+23/05/28 13:13:59 INFO Executor: Running task 66.0 in stage 8.0 (TID 713)
+23/05/28 13:13:59 INFO CoarseGrainedExecutorBackend: Got assigned task 714
+23/05/28 13:13:59 INFO Executor: Running task 67.0 in stage 8.0 (TID 714)
+23/05/28 13:13:59 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:59 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+23/05/28 13:13:59 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:59 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+23/05/28 13:13:59 INFO Executor: Finished task 66.0 in stage 8.0 (TID 713). 1705 bytes result sent to driver
+23/05/28 13:13:59 INFO Executor: Finished task 67.0 in stage 8.0 (TID 714). 1705 bytes result sent to driver
+23/05/28 13:13:59 INFO CoarseGrainedExecutorBackend: Got assigned task 746
+23/05/28 13:13:59 INFO Executor: Running task 99.0 in stage 8.0 (TID 746)
+23/05/28 13:13:59 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:59 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+23/05/28 13:13:59 INFO CoarseGrainedExecutorBackend: Got assigned task 752
+23/05/28 13:13:59 INFO CoarseGrainedExecutorBackend: Got assigned task 753
+23/05/28 13:13:59 INFO Executor: Running task 105.0 in stage 8.0 (TID 752)
+23/05/28 13:13:59 INFO Executor: Running task 106.0 in stage 8.0 (TID 753)
+23/05/28 13:13:59 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:59 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+23/05/28 13:13:59 INFO Executor: Finished task 99.0 in stage 8.0 (TID 746). 1791 bytes result sent to driver
+23/05/28 13:13:59 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:13:59 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 4 ms
+23/05/28 13:13:59 INFO Executor: Finished task 106.0 in stage 8.0 (TID 753). 1705 bytes result sent to driver
+23/05/28 13:13:59 INFO Executor: Finished task 105.0 in stage 8.0 (TID 752). 1705 bytes result sent to driver
+23/05/28 13:14:03 INFO Executor: Finished task 1.0 in stage 8.0 (TID 648). 3010 bytes result sent to driver
+23/05/28 13:14:03 INFO CoarseGrainedExecutorBackend: Got assigned task 757
+23/05/28 13:14:03 INFO Executor: Running task 4.0 in stage 9.0 (TID 757)
+23/05/28 13:14:03 INFO TorrentBroadcast: Started reading broadcast variable 14 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:14:03 INFO CoarseGrainedExecutorBackend: Got assigned task 761
+23/05/28 13:14:03 INFO Executor: Running task 8.0 in stage 9.0 (TID 761)
+23/05/28 13:14:04 INFO CoarseGrainedExecutorBackend: Got assigned task 765
+23/05/28 13:14:04 INFO Executor: Running task 12.0 in stage 9.0 (TID 765)
+23/05/28 13:14:04 INFO CoarseGrainedExecutorBackend: Got assigned task 769
+23/05/28 13:14:04 INFO Executor: Running task 15.0 in stage 9.0 (TID 769)
+23/05/28 13:14:04 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 34.6 KiB, free 1298.9 MiB)
+23/05/28 13:14:04 INFO TorrentBroadcast: Reading broadcast variable 14 took 120 ms
+23/05/28 13:14:04 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 43.9 KiB, free 1298.9 MiB)
+23/05/28 13:14:04 INFO BlockManager: Found block rdd_14_8 locally
+23/05/28 13:14:04 INFO BlockManager: Found block rdd_14_15 locally
+23/05/28 13:14:04 INFO BlockManager: Found block rdd_14_12 locally
+23/05/28 13:14:04 INFO BlockManager: Found block rdd_14_4 locally
+23/05/28 13:14:04 INFO TorrentBroadcast: Started reading broadcast variable 13 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:14:04 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 101.0 B, free 1298.9 MiB)
+23/05/28 13:14:04 INFO TorrentBroadcast: Reading broadcast variable 13 took 35 ms
+23/05/28 13:14:04 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 40.0 B, free 1298.9 MiB)
+23/05/28 13:14:04 INFO Executor: Finished task 15.0 in stage 9.0 (TID 769). 1769 bytes result sent to driver
+23/05/28 13:14:04 INFO CoarseGrainedExecutorBackend: Got assigned task 789
+23/05/28 13:14:04 INFO Executor: Running task 36.0 in stage 9.0 (TID 789)
+23/05/28 13:14:04 INFO BlockManager: Found block rdd_14_36 locally
+23/05/28 13:14:04 INFO Executor: Finished task 12.0 in stage 9.0 (TID 765). 1769 bytes result sent to driver
+23/05/28 13:14:04 INFO Executor: Finished task 4.0 in stage 9.0 (TID 757). 1769 bytes result sent to driver
+23/05/28 13:14:04 INFO CoarseGrainedExecutorBackend: Got assigned task 796
+23/05/28 13:14:04 INFO CoarseGrainedExecutorBackend: Got assigned task 798
+23/05/28 13:14:04 INFO Executor: Running task 39.0 in stage 9.0 (TID 798)
+23/05/28 13:14:04 INFO BlockManager: Found block rdd_14_39 locally
+23/05/28 13:14:04 INFO Executor: Finished task 8.0 in stage 9.0 (TID 761). 1769 bytes result sent to driver
+23/05/28 13:14:04 INFO Executor: Running task 37.0 in stage 9.0 (TID 796)
+23/05/28 13:14:04 INFO BlockManager: Found block rdd_14_37 locally
+23/05/28 13:14:04 INFO Executor: Finished task 36.0 in stage 9.0 (TID 789). 1726 bytes result sent to driver
+23/05/28 13:14:04 INFO CoarseGrainedExecutorBackend: Got assigned task 800
+23/05/28 13:14:04 INFO Executor: Running task 40.0 in stage 9.0 (TID 800)
+23/05/28 13:14:04 INFO BlockManager: Found block rdd_14_40 locally
+23/05/28 13:14:04 INFO CoarseGrainedExecutorBackend: Got assigned task 803
+23/05/28 13:14:04 INFO Executor: Running task 52.0 in stage 9.0 (TID 803)
+23/05/28 13:14:04 INFO BlockManager: Found block rdd_14_52 locally
+23/05/28 13:14:04 INFO Executor: Finished task 39.0 in stage 9.0 (TID 798). 1726 bytes result sent to driver
+23/05/28 13:14:04 INFO Executor: Finished task 37.0 in stage 9.0 (TID 796). 1726 bytes result sent to driver
+23/05/28 13:14:04 INFO CoarseGrainedExecutorBackend: Got assigned task 816
+23/05/28 13:14:04 INFO Executor: Running task 53.0 in stage 9.0 (TID 816)
+23/05/28 13:14:04 INFO BlockManager: Found block rdd_14_53 locally
+23/05/28 13:14:04 INFO Executor: Finished task 40.0 in stage 9.0 (TID 800). 1726 bytes result sent to driver
+23/05/28 13:14:04 INFO CoarseGrainedExecutorBackend: Got assigned task 818
+23/05/28 13:14:04 INFO Executor: Finished task 52.0 in stage 9.0 (TID 803). 1726 bytes result sent to driver
+23/05/28 13:14:04 INFO Executor: Running task 54.0 in stage 9.0 (TID 818)
+23/05/28 13:14:04 INFO BlockManager: Found block rdd_14_54 locally
+23/05/28 13:14:04 INFO CoarseGrainedExecutorBackend: Got assigned task 819
+23/05/28 13:14:04 INFO CoarseGrainedExecutorBackend: Got assigned task 820
+23/05/28 13:14:04 INFO Executor: Running task 68.0 in stage 9.0 (TID 820)
+23/05/28 13:14:04 INFO BlockManager: Found block rdd_14_68 locally
+23/05/28 13:14:04 INFO Executor: Running task 56.0 in stage 9.0 (TID 819)
+23/05/28 13:14:04 INFO BlockManager: Found block rdd_14_56 locally
+23/05/28 13:14:04 INFO Executor: Finished task 53.0 in stage 9.0 (TID 816). 1812 bytes result sent to driver
+23/05/28 13:14:04 INFO Executor: Finished task 54.0 in stage 9.0 (TID 818). 1769 bytes result sent to driver
+23/05/28 13:14:04 INFO CoarseGrainedExecutorBackend: Got assigned task 834
+23/05/28 13:14:04 INFO Executor: Running task 69.0 in stage 9.0 (TID 834)
+23/05/28 13:14:04 INFO BlockManager: Found block rdd_14_69 locally
+23/05/28 13:14:04 INFO CoarseGrainedExecutorBackend: Got assigned task 837
+23/05/28 13:14:04 INFO Executor: Running task 70.0 in stage 9.0 (TID 837)
+23/05/28 13:14:04 INFO BlockManager: Found block rdd_14_70 locally
+23/05/28 13:14:04 INFO Executor: Finished task 56.0 in stage 9.0 (TID 819). 1769 bytes result sent to driver
+23/05/28 13:14:04 INFO CoarseGrainedExecutorBackend: Got assigned task 840
+23/05/28 13:14:04 INFO Executor: Running task 74.0 in stage 9.0 (TID 840)
+23/05/28 13:14:04 INFO BlockManager: Found block rdd_14_74 locally
+23/05/28 13:14:04 INFO Executor: Finished task 68.0 in stage 9.0 (TID 820). 1812 bytes result sent to driver
+23/05/28 13:14:04 INFO CoarseGrainedExecutorBackend: Got assigned task 846
+23/05/28 13:14:04 INFO Executor: Running task 77.0 in stage 9.0 (TID 846)
+23/05/28 13:14:04 INFO BlockManager: Found block rdd_14_77 locally
+23/05/28 13:14:04 INFO Executor: Finished task 69.0 in stage 9.0 (TID 834). 1726 bytes result sent to driver
+23/05/28 13:14:04 INFO Executor: Finished task 74.0 in stage 9.0 (TID 840). 1726 bytes result sent to driver
+23/05/28 13:14:05 INFO Executor: Finished task 70.0 in stage 9.0 (TID 837). 1726 bytes result sent to driver
+23/05/28 13:14:05 INFO CoarseGrainedExecutorBackend: Got assigned task 849
+23/05/28 13:14:05 INFO Executor: Running task 82.0 in stage 9.0 (TID 849)
+23/05/28 13:14:05 INFO Executor: Finished task 77.0 in stage 9.0 (TID 846). 1726 bytes result sent to driver
+23/05/28 13:14:05 INFO CoarseGrainedExecutorBackend: Got assigned task 852
+23/05/28 13:14:05 INFO CoarseGrainedExecutorBackend: Got assigned task 854
+23/05/28 13:14:05 INFO Executor: Running task 96.0 in stage 9.0 (TID 854)
+23/05/28 13:14:05 INFO Executor: Running task 85.0 in stage 9.0 (TID 852)
+23/05/28 13:14:05 INFO BlockManager: Found block rdd_14_82 locally
+23/05/28 13:14:05 INFO BlockManager: Found block rdd_14_85 locally
+23/05/28 13:14:05 INFO BlockManager: Found block rdd_14_96 locally
+23/05/28 13:14:05 INFO CoarseGrainedExecutorBackend: Got assigned task 858
+23/05/28 13:14:05 INFO Executor: Running task 98.0 in stage 9.0 (TID 858)
+23/05/28 13:14:05 INFO BlockManager: Found block rdd_14_98 locally
+23/05/28 13:14:05 INFO Executor: Finished task 82.0 in stage 9.0 (TID 849). 1726 bytes result sent to driver
+23/05/28 13:14:05 INFO Executor: Finished task 98.0 in stage 9.0 (TID 858). 1726 bytes result sent to driver
+23/05/28 13:14:05 INFO CoarseGrainedExecutorBackend: Got assigned task 863
+23/05/28 13:14:05 INFO Executor: Running task 100.0 in stage 9.0 (TID 863)
+23/05/28 13:14:05 INFO Executor: Finished task 96.0 in stage 9.0 (TID 854). 1726 bytes result sent to driver
+23/05/28 13:14:05 INFO Executor: Finished task 85.0 in stage 9.0 (TID 852). 1726 bytes result sent to driver
+23/05/28 13:14:05 INFO BlockManager: Found block rdd_14_100 locally
+23/05/28 13:14:05 INFO Executor: Finished task 100.0 in stage 9.0 (TID 863). 1812 bytes result sent to driver
+23/05/28 13:14:05 INFO CoarseGrainedExecutorBackend: Got assigned task 868
+23/05/28 13:14:05 INFO CoarseGrainedExecutorBackend: Got assigned task 872
+23/05/28 13:14:05 INFO Executor: Running task 7.0 in stage 10.0 (TID 872)
+23/05/28 13:14:05 INFO MapOutputTrackerWorker: Updating epoch to 4 and clearing cache
+23/05/28 13:14:05 INFO Executor: Running task 3.0 in stage 10.0 (TID 868)
+23/05/28 13:14:05 INFO CoarseGrainedExecutorBackend: Got assigned task 876
+23/05/28 13:14:05 INFO TorrentBroadcast: Started reading broadcast variable 15 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:14:05 INFO CoarseGrainedExecutorBackend: Got assigned task 880
+23/05/28 13:14:05 INFO Executor: Running task 11.0 in stage 10.0 (TID 876)
+23/05/28 13:14:05 INFO Executor: Running task 15.0 in stage 10.0 (TID 880)
+23/05/28 13:14:05 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 4.3 KiB, free 1298.9 MiB)
+23/05/28 13:14:05 INFO TorrentBroadcast: Reading broadcast variable 15 took 81 ms
+23/05/28 13:14:05 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 8.2 KiB, free 1298.9 MiB)
+23/05/28 13:14:05 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 3, fetching them
+23/05/28 13:14:05 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@192.168.1.45:45441)
+23/05/28 13:14:05 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 3, fetching them
+23/05/28 13:14:05 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 3, fetching them
+23/05/28 13:14:05 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 3, fetching them
+23/05/28 13:14:05 INFO MapOutputTrackerWorker: Got the map output locations
+23/05/28 13:14:05 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:14:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+23/05/28 13:14:05 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:14:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+23/05/28 13:14:05 INFO ShuffleBlockFetcherIterator: Getting 109 (12.8 MiB) non-empty blocks including 22 (2.6 MiB) local and 28 (3.3 MiB) host-local and 0 (0.0 B) push-merged-local and 59 (6.9 MiB) remote blocks
+23/05/28 13:14:05 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:14:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 10 ms
+23/05/28 13:14:05 INFO Executor: Finished task 15.0 in stage 10.0 (TID 880). 1791 bytes result sent to driver
+23/05/28 13:14:05 INFO Executor: Finished task 11.0 in stage 10.0 (TID 876). 1748 bytes result sent to driver
+23/05/28 13:14:05 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 14 ms
+23/05/28 13:14:05 INFO Executor: Finished task 7.0 in stage 10.0 (TID 872). 1748 bytes result sent to driver
+23/05/28 13:14:05 INFO CoarseGrainedExecutorBackend: Got assigned task 932
+23/05/28 13:14:05 INFO Executor: Running task 67.0 in stage 10.0 (TID 932)
+23/05/28 13:14:05 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:14:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+23/05/28 13:14:05 INFO Executor: Finished task 67.0 in stage 10.0 (TID 932). 1705 bytes result sent to driver
+23/05/28 13:14:05 INFO CoarseGrainedExecutorBackend: Got assigned task 936
+23/05/28 13:14:05 INFO CoarseGrainedExecutorBackend: Got assigned task 937
+23/05/28 13:14:05 INFO Executor: Running task 72.0 in stage 10.0 (TID 937)
+23/05/28 13:14:05 INFO Executor: Running task 71.0 in stage 10.0 (TID 936)
+23/05/28 13:14:05 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:14:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+23/05/28 13:14:05 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:14:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+23/05/28 13:14:05 INFO Executor: Finished task 72.0 in stage 10.0 (TID 937). 1705 bytes result sent to driver
+23/05/28 13:14:05 INFO Executor: Finished task 71.0 in stage 10.0 (TID 936). 1705 bytes result sent to driver
+23/05/28 13:14:05 INFO CoarseGrainedExecutorBackend: Got assigned task 956
+23/05/28 13:14:05 INFO Executor: Running task 91.0 in stage 10.0 (TID 956)
+23/05/28 13:14:05 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:14:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+23/05/28 13:14:05 INFO Executor: Finished task 91.0 in stage 10.0 (TID 956). 1705 bytes result sent to driver
+23/05/28 13:14:05 INFO CoarseGrainedExecutorBackend: Got assigned task 970
+23/05/28 13:14:05 INFO Executor: Running task 105.0 in stage 10.0 (TID 970)
+23/05/28 13:14:05 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:14:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+23/05/28 13:14:05 INFO Executor: Finished task 105.0 in stage 10.0 (TID 970). 1791 bytes result sent to driver
+23/05/28 13:14:15 INFO Executor: Finished task 3.0 in stage 10.0 (TID 868). 2967 bytes result sent to driver
+23/05/28 13:14:16 INFO CoarseGrainedExecutorBackend: Got assigned task 975
+23/05/28 13:14:16 INFO Executor: Running task 4.0 in stage 11.0 (TID 975)
+23/05/28 13:14:16 INFO TorrentBroadcast: Started reading broadcast variable 17 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:14:16 INFO CoarseGrainedExecutorBackend: Got assigned task 979
+23/05/28 13:14:16 INFO Executor: Running task 8.0 in stage 11.0 (TID 979)
+23/05/28 13:14:16 INFO CoarseGrainedExecutorBackend: Got assigned task 983
+23/05/28 13:14:16 INFO Executor: Running task 12.0 in stage 11.0 (TID 983)
+23/05/28 13:14:16 INFO CoarseGrainedExecutorBackend: Got assigned task 987
+23/05/28 13:14:16 INFO Executor: Running task 15.0 in stage 11.0 (TID 987)
+23/05/28 13:14:16 INFO MemoryStore: Block broadcast_17_piece0 stored as bytes in memory (estimated size 35.4 KiB, free 1298.8 MiB)
+23/05/28 13:14:16 INFO TorrentBroadcast: Reading broadcast variable 17 took 143 ms
+23/05/28 13:14:16 INFO MemoryStore: Block broadcast_17 stored as values in memory (estimated size 46.6 KiB, free 1298.8 MiB)
+23/05/28 13:14:16 INFO BlockManager: Found block rdd_14_15 locally
+23/05/28 13:14:16 INFO BlockManager: Found block rdd_14_12 locally
+23/05/28 13:14:16 INFO BlockManager: Found block rdd_14_8 locally
+23/05/28 13:14:16 INFO BlockManager: Found block rdd_14_4 locally
+23/05/28 13:14:16 INFO TorrentBroadcast: Started reading broadcast variable 16 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:14:16 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 101.0 B, free 1298.8 MiB)
+23/05/28 13:14:16 INFO TorrentBroadcast: Reading broadcast variable 16 took 48 ms
+23/05/28 13:14:16 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 40.0 B, free 1298.8 MiB)
+23/05/28 13:14:16 INFO Executor: Finished task 12.0 in stage 11.0 (TID 983). 1726 bytes result sent to driver
+23/05/28 13:14:16 INFO Executor: Finished task 8.0 in stage 11.0 (TID 979). 1726 bytes result sent to driver
+23/05/28 13:14:16 INFO CoarseGrainedExecutorBackend: Got assigned task 998
+23/05/28 13:14:16 INFO Executor: Running task 36.0 in stage 11.0 (TID 998)
+23/05/28 13:14:16 INFO CoarseGrainedExecutorBackend: Got assigned task 999
+23/05/28 13:14:16 INFO Executor: Running task 37.0 in stage 11.0 (TID 999)
+23/05/28 13:14:16 INFO Executor: Finished task 4.0 in stage 11.0 (TID 975). 1726 bytes result sent to driver
+23/05/28 13:14:16 INFO BlockManager: Found block rdd_14_37 locally
+23/05/28 13:14:16 INFO CoarseGrainedExecutorBackend: Got assigned task 1000
+23/05/28 13:14:16 INFO BlockManager: Found block rdd_14_36 locally
+23/05/28 13:14:16 INFO Executor: Running task 39.0 in stage 11.0 (TID 1000)
+23/05/28 13:14:16 INFO BlockManager: Found block rdd_14_39 locally
+23/05/28 13:14:16 INFO Executor: Finished task 15.0 in stage 11.0 (TID 987). 1726 bytes result sent to driver
+23/05/28 13:14:16 INFO CoarseGrainedExecutorBackend: Got assigned task 1003
+23/05/28 13:14:16 INFO Executor: Running task 40.0 in stage 11.0 (TID 1003)
+23/05/28 13:14:16 INFO BlockManager: Found block rdd_14_40 locally
+23/05/28 13:14:16 INFO Executor: Finished task 36.0 in stage 11.0 (TID 998). 1726 bytes result sent to driver
+23/05/28 13:14:16 INFO CoarseGrainedExecutorBackend: Got assigned task 1011
+23/05/28 13:14:16 INFO Executor: Running task 52.0 in stage 11.0 (TID 1011)
+23/05/28 13:14:16 INFO BlockManager: Found block rdd_14_52 locally
+23/05/28 13:14:16 INFO Executor: Finished task 37.0 in stage 11.0 (TID 999). 1726 bytes result sent to driver
+23/05/28 13:14:16 INFO Executor: Finished task 39.0 in stage 11.0 (TID 1000). 1726 bytes result sent to driver
+23/05/28 13:14:16 INFO CoarseGrainedExecutorBackend: Got assigned task 1015
+23/05/28 13:14:16 INFO CoarseGrainedExecutorBackend: Got assigned task 1016
+23/05/28 13:14:16 INFO Executor: Running task 54.0 in stage 11.0 (TID 1016)
+23/05/28 13:14:16 INFO Executor: Running task 53.0 in stage 11.0 (TID 1015)
+23/05/28 13:14:16 INFO BlockManager: Found block rdd_14_54 locally
+23/05/28 13:14:16 INFO BlockManager: Found block rdd_14_53 locally
+23/05/28 13:14:16 INFO Executor: Finished task 40.0 in stage 11.0 (TID 1003). 1726 bytes result sent to driver
+23/05/28 13:14:16 INFO CoarseGrainedExecutorBackend: Got assigned task 1020
+23/05/28 13:14:16 INFO Executor: Running task 56.0 in stage 11.0 (TID 1020)
+23/05/28 13:14:16 INFO BlockManager: Found block rdd_14_56 locally
+23/05/28 13:14:16 INFO Executor: Finished task 54.0 in stage 11.0 (TID 1016). 1726 bytes result sent to driver
+23/05/28 13:14:16 INFO Executor: Finished task 52.0 in stage 11.0 (TID 1011). 1726 bytes result sent to driver
+23/05/28 13:14:16 INFO CoarseGrainedExecutorBackend: Got assigned task 1026
+23/05/28 13:14:16 INFO Executor: Running task 68.0 in stage 11.0 (TID 1026)
+23/05/28 13:14:16 INFO BlockManager: Found block rdd_14_68 locally
+23/05/28 13:14:16 INFO CoarseGrainedExecutorBackend: Got assigned task 1027
+23/05/28 13:14:16 INFO Executor: Running task 69.0 in stage 11.0 (TID 1027)
+23/05/28 13:14:16 INFO BlockManager: Found block rdd_14_69 locally
+23/05/28 13:14:16 INFO Executor: Finished task 53.0 in stage 11.0 (TID 1015). 1769 bytes result sent to driver
+23/05/28 13:14:17 INFO CoarseGrainedExecutorBackend: Got assigned task 1033
+23/05/28 13:14:17 INFO Executor: Running task 70.0 in stage 11.0 (TID 1033)
+23/05/28 13:14:17 INFO Executor: Finished task 56.0 in stage 11.0 (TID 1020). 1769 bytes result sent to driver
+23/05/28 13:14:17 INFO BlockManager: Found block rdd_14_70 locally
+23/05/28 13:14:17 INFO CoarseGrainedExecutorBackend: Got assigned task 1038
+23/05/28 13:14:17 INFO Executor: Running task 74.0 in stage 11.0 (TID 1038)
+23/05/28 13:14:17 INFO BlockManager: Found block rdd_14_74 locally
+23/05/28 13:14:17 INFO Executor: Finished task 69.0 in stage 11.0 (TID 1027). 1726 bytes result sent to driver
+23/05/28 13:14:17 INFO Executor: Finished task 68.0 in stage 11.0 (TID 1026). 1769 bytes result sent to driver
+23/05/28 13:14:17 INFO CoarseGrainedExecutorBackend: Got assigned task 1043
+23/05/28 13:14:17 INFO Executor: Running task 77.0 in stage 11.0 (TID 1043)
+23/05/28 13:14:17 INFO CoarseGrainedExecutorBackend: Got assigned task 1044
+23/05/28 13:14:17 INFO Executor: Running task 82.0 in stage 11.0 (TID 1044)
+23/05/28 13:14:17 INFO BlockManager: Found block rdd_14_82 locally
+23/05/28 13:14:17 INFO BlockManager: Found block rdd_14_77 locally
+23/05/28 13:14:17 INFO Executor: Finished task 70.0 in stage 11.0 (TID 1033). 1726 bytes result sent to driver
+23/05/28 13:14:17 INFO CoarseGrainedExecutorBackend: Got assigned task 1047
+23/05/28 13:14:17 INFO Executor: Running task 85.0 in stage 11.0 (TID 1047)
+23/05/28 13:14:17 INFO BlockManager: Found block rdd_14_85 locally
+23/05/28 13:14:17 INFO Executor: Finished task 74.0 in stage 11.0 (TID 1038). 1726 bytes result sent to driver
+23/05/28 13:14:17 INFO CoarseGrainedExecutorBackend: Got assigned task 1054
+23/05/28 13:14:17 INFO Executor: Running task 96.0 in stage 11.0 (TID 1054)
+23/05/28 13:14:17 INFO Executor: Finished task 77.0 in stage 11.0 (TID 1043). 1726 bytes result sent to driver
+23/05/28 13:14:17 INFO CoarseGrainedExecutorBackend: Got assigned task 1058
+23/05/28 13:14:17 INFO Executor: Running task 98.0 in stage 11.0 (TID 1058)
+23/05/28 13:14:17 INFO BlockManager: Found block rdd_14_96 locally
+23/05/28 13:14:17 INFO BlockManager: Found block rdd_14_98 locally
+23/05/28 13:14:17 INFO Executor: Finished task 82.0 in stage 11.0 (TID 1044). 1726 bytes result sent to driver
+23/05/28 13:14:17 INFO Executor: Finished task 85.0 in stage 11.0 (TID 1047). 1726 bytes result sent to driver
+23/05/28 13:14:17 INFO CoarseGrainedExecutorBackend: Got assigned task 1067
+23/05/28 13:14:17 INFO Executor: Running task 100.0 in stage 11.0 (TID 1067)
+23/05/28 13:14:17 INFO BlockManager: Found block rdd_14_100 locally
+23/05/28 13:14:17 INFO Executor: Finished task 98.0 in stage 11.0 (TID 1058). 1726 bytes result sent to driver
+23/05/28 13:14:17 INFO Executor: Finished task 96.0 in stage 11.0 (TID 1054). 1726 bytes result sent to driver
+23/05/28 13:14:17 INFO Executor: Finished task 100.0 in stage 11.0 (TID 1067). 1726 bytes result sent to driver
+23/05/28 13:14:17 INFO CoarseGrainedExecutorBackend: Got assigned task 1084
+23/05/28 13:14:17 INFO Executor: Running task 1.0 in stage 12.0 (TID 1084)
+23/05/28 13:14:17 INFO MapOutputTrackerWorker: Updating epoch to 5 and clearing cache
+23/05/28 13:14:17 INFO TorrentBroadcast: Started reading broadcast variable 18 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:14:17 INFO CoarseGrainedExecutorBackend: Got assigned task 1088
+23/05/28 13:14:17 INFO Executor: Running task 5.0 in stage 12.0 (TID 1088)
+23/05/28 13:14:17 INFO CoarseGrainedExecutorBackend: Got assigned task 1092
+23/05/28 13:14:17 INFO Executor: Running task 9.0 in stage 12.0 (TID 1092)
+23/05/28 13:14:17 INFO CoarseGrainedExecutorBackend: Got assigned task 1096
+23/05/28 13:14:17 INFO Executor: Running task 13.0 in stage 12.0 (TID 1096)
+23/05/28 13:14:17 INFO MemoryStore: Block broadcast_18_piece0 stored as bytes in memory (estimated size 4.6 KiB, free 1298.8 MiB)
+23/05/28 13:14:18 INFO TorrentBroadcast: Reading broadcast variable 18 took 150 ms
+23/05/28 13:14:18 INFO MemoryStore: Block broadcast_18 stored as values in memory (estimated size 9.1 KiB, free 1298.8 MiB)
+23/05/28 13:14:18 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 4, fetching them
+23/05/28 13:14:18 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 4, fetching them
+23/05/28 13:14:18 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@192.168.1.45:45441)
+23/05/28 13:14:18 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 4, fetching them
+23/05/28 13:14:18 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 4, fetching them
+23/05/28 13:14:18 INFO MapOutputTrackerWorker: Got the map output locations
+23/05/28 13:14:18 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:14:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+23/05/28 13:14:18 INFO ShuffleBlockFetcherIterator: Getting 109 (9.6 MiB) non-empty blocks including 22 (1991.8 KiB) local and 28 (2.5 MiB) host-local and 0 (0.0 B) push-merged-local and 59 (5.2 MiB) remote blocks
+23/05/28 13:14:18 INFO Executor: Finished task 13.0 in stage 12.0 (TID 1096). 1705 bytes result sent to driver
+23/05/28 13:14:18 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 2 ms
+23/05/28 13:14:18 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:14:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+23/05/28 13:14:18 INFO ShuffleBlockFetcherIterator: Getting 109 (11.6 MiB) non-empty blocks including 22 (2.4 MiB) local and 28 (3.0 MiB) host-local and 0 (0.0 B) push-merged-local and 59 (6.3 MiB) remote blocks
+23/05/28 13:14:18 INFO Executor: Finished task 9.0 in stage 12.0 (TID 1092). 1705 bytes result sent to driver
+23/05/28 13:14:18 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 2 ms
+23/05/28 13:14:18 INFO CoarseGrainedExecutorBackend: Got assigned task 1133
+23/05/28 13:14:18 INFO Executor: Running task 50.0 in stage 12.0 (TID 1133)
+23/05/28 13:14:18 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:14:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+23/05/28 13:14:18 INFO Executor: Finished task 50.0 in stage 12.0 (TID 1133). 1705 bytes result sent to driver
+23/05/28 13:14:18 INFO CoarseGrainedExecutorBackend: Got assigned task 1142
+23/05/28 13:14:18 INFO Executor: Running task 59.0 in stage 12.0 (TID 1142)
+23/05/28 13:14:18 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:14:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+23/05/28 13:14:18 INFO Executor: Finished task 59.0 in stage 12.0 (TID 1142). 1705 bytes result sent to driver
+23/05/28 13:14:18 INFO CoarseGrainedExecutorBackend: Got assigned task 1149
+23/05/28 13:14:18 INFO Executor: Running task 66.0 in stage 12.0 (TID 1149)
+23/05/28 13:14:18 INFO ShuffleBlockFetcherIterator: Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+23/05/28 13:14:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+23/05/28 13:14:18 INFO Executor: Finished task 66.0 in stage 12.0 (TID 1149). 1705 bytes result sent to driver
+23/05/28 13:14:28 INFO Executor: Finished task 5.0 in stage 12.0 (TID 1088). 2967 bytes result sent to driver
+23/05/28 13:14:31 INFO Executor: Finished task 1.0 in stage 12.0 (TID 1084). 2967 bytes result sent to driver
+23/05/28 13:14:31 INFO CoarseGrainedExecutorBackend: Got assigned task 1195
+23/05/28 13:14:31 INFO Executor: Running task 4.0 in stage 13.0 (TID 1195)
+23/05/28 13:14:31 INFO TorrentBroadcast: Started reading broadcast variable 20 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:14:31 INFO CoarseGrainedExecutorBackend: Got assigned task 1199
+23/05/28 13:14:31 INFO Executor: Running task 8.0 in stage 13.0 (TID 1199)
+23/05/28 13:14:31 INFO CoarseGrainedExecutorBackend: Got assigned task 1203
+23/05/28 13:14:31 INFO Executor: Running task 12.0 in stage 13.0 (TID 1203)
+23/05/28 13:14:31 INFO CoarseGrainedExecutorBackend: Got assigned task 1207
+23/05/28 13:14:31 INFO Executor: Running task 15.0 in stage 13.0 (TID 1207)
+23/05/28 13:14:31 INFO MemoryStore: Block broadcast_20_piece0 stored as bytes in memory (estimated size 37.0 KiB, free 1299.0 MiB)
+23/05/28 13:14:31 INFO TorrentBroadcast: Reading broadcast variable 20 took 59 ms
+23/05/28 13:14:31 INFO MemoryStore: Block broadcast_20 stored as values in memory (estimated size 52.1 KiB, free 1299.0 MiB)
+23/05/28 13:14:31 INFO BlockManager: Found block rdd_14_12 locally
+23/05/28 13:14:31 INFO BlockManager: Found block rdd_14_4 locally
+23/05/28 13:14:31 INFO BlockManager: Found block rdd_14_8 locally
+23/05/28 13:14:31 INFO BlockManager: Found block rdd_14_15 locally
+23/05/28 13:14:31 INFO TorrentBroadcast: Started reading broadcast variable 19 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:14:31 INFO MemoryStore: Block broadcast_19_piece0 stored as bytes in memory (estimated size 101.0 B, free 1299.0 MiB)
+23/05/28 13:14:31 INFO TorrentBroadcast: Reading broadcast variable 19 took 39 ms
+23/05/28 13:14:31 INFO MemoryStore: Block broadcast_19 stored as values in memory (estimated size 40.0 B, free 1299.0 MiB)
+23/05/28 13:14:31 INFO Executor: Finished task 15.0 in stage 13.0 (TID 1207). 1769 bytes result sent to driver
+23/05/28 13:14:31 INFO Executor: Finished task 4.0 in stage 13.0 (TID 1195). 1769 bytes result sent to driver
+23/05/28 13:14:31 INFO CoarseGrainedExecutorBackend: Got assigned task 1212
+23/05/28 13:14:31 INFO Executor: Running task 36.0 in stage 13.0 (TID 1212)
+23/05/28 13:14:31 INFO BlockManager: Found block rdd_14_36 locally
+23/05/28 13:14:31 INFO CoarseGrainedExecutorBackend: Got assigned task 1213
+23/05/28 13:14:31 INFO Executor: Running task 37.0 in stage 13.0 (TID 1213)
+23/05/28 13:14:31 INFO BlockManager: Found block rdd_14_37 locally
+23/05/28 13:14:31 INFO Executor: Finished task 12.0 in stage 13.0 (TID 1203). 1769 bytes result sent to driver
+23/05/28 13:14:31 INFO Executor: Finished task 8.0 in stage 13.0 (TID 1199). 1769 bytes result sent to driver
+23/05/28 13:14:31 INFO CoarseGrainedExecutorBackend: Got assigned task 1217
+23/05/28 13:14:31 INFO Executor: Running task 39.0 in stage 13.0 (TID 1217)
+23/05/28 13:14:31 INFO BlockManager: Found block rdd_14_39 locally
+23/05/28 13:14:31 INFO CoarseGrainedExecutorBackend: Got assigned task 1222
+23/05/28 13:14:31 INFO Executor: Running task 40.0 in stage 13.0 (TID 1222)
+23/05/28 13:14:31 INFO BlockManager: Found block rdd_14_40 locally
+23/05/28 13:14:31 INFO Executor: Finished task 37.0 in stage 13.0 (TID 1213). 1726 bytes result sent to driver
+23/05/28 13:14:31 INFO CoarseGrainedExecutorBackend: Got assigned task 1229
+23/05/28 13:14:31 INFO Executor: Running task 52.0 in stage 13.0 (TID 1229)
+23/05/28 13:14:31 INFO BlockManager: Found block rdd_14_52 locally
+23/05/28 13:14:31 INFO Executor: Finished task 39.0 in stage 13.0 (TID 1217). 1726 bytes result sent to driver
+23/05/28 13:14:31 INFO CoarseGrainedExecutorBackend: Got assigned task 1231
+23/05/28 13:14:31 INFO Executor: Running task 53.0 in stage 13.0 (TID 1231)
+23/05/28 13:14:31 INFO Executor: Finished task 36.0 in stage 13.0 (TID 1212). 1726 bytes result sent to driver
+23/05/28 13:14:32 INFO BlockManager: Found block rdd_14_53 locally
+23/05/28 13:14:32 INFO CoarseGrainedExecutorBackend: Got assigned task 1233
+23/05/28 13:14:32 INFO Executor: Running task 54.0 in stage 13.0 (TID 1233)
+23/05/28 13:14:32 INFO BlockManager: Found block rdd_14_54 locally
+23/05/28 13:14:32 INFO Executor: Finished task 40.0 in stage 13.0 (TID 1222). 1769 bytes result sent to driver
+23/05/28 13:14:32 INFO CoarseGrainedExecutorBackend: Got assigned task 1240
+23/05/28 13:14:32 INFO Executor: Running task 56.0 in stage 13.0 (TID 1240)
+23/05/28 13:14:32 INFO BlockManager: Found block rdd_14_56 locally
+23/05/28 13:14:32 INFO Executor: Finished task 52.0 in stage 13.0 (TID 1229). 1769 bytes result sent to driver
+23/05/28 13:14:32 INFO CoarseGrainedExecutorBackend: Got assigned task 1247
+23/05/28 13:14:32 INFO Executor: Running task 68.0 in stage 13.0 (TID 1247)
+23/05/28 13:14:32 INFO Executor: Finished task 54.0 in stage 13.0 (TID 1233). 1769 bytes result sent to driver
+23/05/28 13:14:32 INFO BlockManager: Found block rdd_14_68 locally
+23/05/28 13:14:32 INFO CoarseGrainedExecutorBackend: Got assigned task 1249
+23/05/28 13:14:32 INFO Executor: Running task 69.0 in stage 13.0 (TID 1249)
+23/05/28 13:14:32 INFO BlockManager: Found block rdd_14_69 locally
+23/05/28 13:14:32 INFO Executor: Finished task 53.0 in stage 13.0 (TID 1231). 1769 bytes result sent to driver
+23/05/28 13:14:32 INFO Executor: Finished task 56.0 in stage 13.0 (TID 1240). 1726 bytes result sent to driver
+23/05/28 13:14:32 INFO CoarseGrainedExecutorBackend: Got assigned task 1259
+23/05/28 13:14:32 INFO Executor: Running task 70.0 in stage 13.0 (TID 1259)
+23/05/28 13:14:32 INFO CoarseGrainedExecutorBackend: Got assigned task 1262
+23/05/28 13:14:32 INFO Executor: Running task 74.0 in stage 13.0 (TID 1262)
+23/05/28 13:14:32 INFO BlockManager: Found block rdd_14_70 locally
+23/05/28 13:14:32 INFO BlockManager: Found block rdd_14_74 locally
+23/05/28 13:14:32 INFO Executor: Finished task 69.0 in stage 13.0 (TID 1249). 1769 bytes result sent to driver
+23/05/28 13:14:32 INFO CoarseGrainedExecutorBackend: Got assigned task 1266
+23/05/28 13:14:32 INFO Executor: Running task 77.0 in stage 13.0 (TID 1266)
+23/05/28 13:14:32 INFO BlockManager: Found block rdd_14_77 locally
+23/05/28 13:14:32 INFO Executor: Finished task 68.0 in stage 13.0 (TID 1247). 1726 bytes result sent to driver
+23/05/28 13:14:32 INFO CoarseGrainedExecutorBackend: Got assigned task 1268
+23/05/28 13:14:32 INFO Executor: Running task 82.0 in stage 13.0 (TID 1268)
+23/05/28 13:14:32 INFO BlockManager: Found block rdd_14_82 locally
+23/05/28 13:14:32 INFO Executor: Finished task 74.0 in stage 13.0 (TID 1262). 1769 bytes result sent to driver
+23/05/28 13:14:32 INFO CoarseGrainedExecutorBackend: Got assigned task 1275
+23/05/28 13:14:32 INFO Executor: Running task 85.0 in stage 13.0 (TID 1275)
+23/05/28 13:14:32 INFO BlockManager: Found block rdd_14_85 locally
+23/05/28 13:14:32 INFO Executor: Finished task 70.0 in stage 13.0 (TID 1259). 1769 bytes result sent to driver
+23/05/28 13:14:32 INFO CoarseGrainedExecutorBackend: Got assigned task 1281
+23/05/28 13:14:32 INFO Executor: Running task 96.0 in stage 13.0 (TID 1281)
+23/05/28 13:14:32 INFO BlockManager: Found block rdd_14_96 locally
+23/05/28 13:14:32 INFO Executor: Finished task 77.0 in stage 13.0 (TID 1266). 1769 bytes result sent to driver
+23/05/28 13:14:32 INFO CoarseGrainedExecutorBackend: Got assigned task 1284
+23/05/28 13:14:32 INFO Executor: Running task 98.0 in stage 13.0 (TID 1284)
+23/05/28 13:14:32 INFO BlockManager: Found block rdd_14_98 locally
+23/05/28 13:14:32 INFO Executor: Finished task 82.0 in stage 13.0 (TID 1268). 1769 bytes result sent to driver
+23/05/28 13:14:32 INFO CoarseGrainedExecutorBackend: Got assigned task 1285
+23/05/28 13:14:32 INFO Executor: Running task 100.0 in stage 13.0 (TID 1285)
+23/05/28 13:14:32 INFO BlockManager: Found block rdd_14_100 locally
+23/05/28 13:14:32 INFO Executor: Finished task 85.0 in stage 13.0 (TID 1275). 1726 bytes result sent to driver
+23/05/28 13:14:33 INFO Executor: Finished task 96.0 in stage 13.0 (TID 1281). 1726 bytes result sent to driver
+23/05/28 13:14:33 INFO Executor: Finished task 100.0 in stage 13.0 (TID 1285). 1726 bytes result sent to driver
+23/05/28 13:14:33 INFO Executor: Finished task 98.0 in stage 13.0 (TID 1284). 1726 bytes result sent to driver
+23/05/28 13:14:33 INFO CoarseGrainedExecutorBackend: Got assigned task 1304
+23/05/28 13:14:33 INFO Executor: Running task 3.0 in stage 14.0 (TID 1304)
+23/05/28 13:14:33 INFO MapOutputTrackerWorker: Updating epoch to 6 and clearing cache
+23/05/28 13:14:33 INFO TorrentBroadcast: Started reading broadcast variable 21 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:14:33 INFO CoarseGrainedExecutorBackend: Got assigned task 1308
+23/05/28 13:14:33 INFO Executor: Running task 7.0 in stage 14.0 (TID 1308)
+23/05/28 13:14:33 INFO CoarseGrainedExecutorBackend: Got assigned task 1312
+23/05/28 13:14:33 INFO Executor: Running task 11.0 in stage 14.0 (TID 1312)
+23/05/28 13:14:33 INFO CoarseGrainedExecutorBackend: Got assigned task 1316
+23/05/28 13:14:33 INFO Executor: Running task 15.0 in stage 14.0 (TID 1316)
+23/05/28 13:14:33 INFO MemoryStore: Block broadcast_21_piece0 stored as bytes in memory (estimated size 5.1 KiB, free 1298.9 MiB)
+23/05/28 13:14:33 INFO TorrentBroadcast: Reading broadcast variable 21 took 124 ms
+23/05/28 13:14:33 INFO MemoryStore: Block broadcast_21 stored as values in memory (estimated size 10.9 KiB, free 1298.9 MiB)
+23/05/28 13:14:33 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 5, fetching them
+23/05/28 13:14:33 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 5, fetching them
+23/05/28 13:14:33 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 5, fetching them
+23/05/28 13:14:33 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@192.168.1.45:45441)
+23/05/28 13:14:33 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 5, fetching them
+23/05/28 13:14:33 INFO MapOutputTrackerWorker: Got the map output locations
+23/05/28 13:14:33 INFO ShuffleBlockFetcherIterator: Getting 109 (8.5 MiB) non-empty blocks including 22 (1773.3 KiB) local and 28 (2.2 MiB) host-local and 0 (0.0 B) push-merged-local and 59 (4.6 MiB) remote blocks
+23/05/28 13:14:33 INFO ShuffleBlockFetcherIterator: Getting 109 (9.6 MiB) non-empty blocks including 22 (1991.8 KiB) local and 28 (2.5 MiB) host-local and 0 (0.0 B) push-merged-local and 59 (5.2 MiB) remote blocks
+23/05/28 13:14:33 INFO ShuffleBlockFetcherIterator: Getting 109 (11.6 MiB) non-empty blocks including 22 (2.4 MiB) local and 28 (3.0 MiB) host-local and 0 (0.0 B) push-merged-local and 59 (6.3 MiB) remote blocks
+23/05/28 13:14:33 INFO ShuffleBlockFetcherIterator: Getting 109 (7.2 MiB) non-empty blocks including 22 (1510.1 KiB) local and 28 (1911.4 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (3.9 MiB) remote blocks
+23/05/28 13:14:33 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 2 ms
+23/05/28 13:14:33 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 2 ms
+23/05/28 13:14:33 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 4 ms
+23/05/28 13:14:33 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 2 ms
+23/05/28 13:14:46 INFO Executor: Finished task 7.0 in stage 14.0 (TID 1308). 2967 bytes result sent to driver
+23/05/28 13:14:52 INFO Executor: Finished task 15.0 in stage 14.0 (TID 1316). 2967 bytes result sent to driver
+23/05/28 13:14:55 INFO Executor: Finished task 3.0 in stage 14.0 (TID 1304). 2967 bytes result sent to driver
+23/05/28 13:14:56 INFO Executor: Finished task 11.0 in stage 14.0 (TID 1312). 2967 bytes result sent to driver
+23/05/28 13:14:57 INFO CoarseGrainedExecutorBackend: Got assigned task 1410
+23/05/28 13:14:57 INFO Executor: Running task 4.0 in stage 15.0 (TID 1410)
+23/05/28 13:14:57 INFO TorrentBroadcast: Started reading broadcast variable 23 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:14:57 INFO CoarseGrainedExecutorBackend: Got assigned task 1414
+23/05/28 13:14:57 INFO Executor: Running task 8.0 in stage 15.0 (TID 1414)
+23/05/28 13:14:57 INFO CoarseGrainedExecutorBackend: Got assigned task 1418
+23/05/28 13:14:57 INFO Executor: Running task 12.0 in stage 15.0 (TID 1418)
+23/05/28 13:14:57 INFO CoarseGrainedExecutorBackend: Got assigned task 1422
+23/05/28 13:14:57 INFO Executor: Running task 15.0 in stage 15.0 (TID 1422)
+23/05/28 13:14:57 INFO MemoryStore: Block broadcast_23_piece0 stored as bytes in memory (estimated size 39.9 KiB, free 1298.9 MiB)
+23/05/28 13:14:57 INFO TorrentBroadcast: Reading broadcast variable 23 took 79 ms
+23/05/28 13:14:57 INFO MemoryStore: Block broadcast_23 stored as values in memory (estimated size 63.1 KiB, free 1298.8 MiB)
+23/05/28 13:14:57 INFO BlockManager: Found block rdd_14_8 locally
+23/05/28 13:14:57 INFO BlockManager: Found block rdd_14_4 locally
+23/05/28 13:14:57 INFO BlockManager: Found block rdd_14_12 locally
+23/05/28 13:14:57 INFO BlockManager: Found block rdd_14_15 locally
+23/05/28 13:14:57 INFO TorrentBroadcast: Started reading broadcast variable 22 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:14:57 INFO MemoryStore: Block broadcast_22_piece0 stored as bytes in memory (estimated size 101.0 B, free 1298.8 MiB)
+23/05/28 13:14:57 INFO TorrentBroadcast: Reading broadcast variable 22 took 37 ms
+23/05/28 13:14:57 INFO MemoryStore: Block broadcast_22 stored as values in memory (estimated size 40.0 B, free 1298.8 MiB)
+23/05/28 13:14:57 INFO Executor: Finished task 4.0 in stage 15.0 (TID 1410). 1769 bytes result sent to driver
+23/05/28 13:14:57 INFO CoarseGrainedExecutorBackend: Got assigned task 1437
+23/05/28 13:14:57 INFO Executor: Running task 36.0 in stage 15.0 (TID 1437)
+23/05/28 13:14:57 INFO BlockManager: Found block rdd_14_36 locally
+23/05/28 13:14:57 INFO Executor: Finished task 8.0 in stage 15.0 (TID 1414). 1769 bytes result sent to driver
+23/05/28 13:14:57 INFO Executor: Finished task 12.0 in stage 15.0 (TID 1418). 1812 bytes result sent to driver
+23/05/28 13:14:57 INFO CoarseGrainedExecutorBackend: Got assigned task 1439
+23/05/28 13:14:57 INFO Executor: Running task 37.0 in stage 15.0 (TID 1439)
+23/05/28 13:14:57 INFO BlockManager: Found block rdd_14_37 locally
+23/05/28 13:14:57 INFO CoarseGrainedExecutorBackend: Got assigned task 1442
+23/05/28 13:14:57 INFO Executor: Running task 39.0 in stage 15.0 (TID 1442)
+23/05/28 13:14:57 INFO Executor: Finished task 15.0 in stage 15.0 (TID 1422). 1812 bytes result sent to driver
+23/05/28 13:14:57 INFO BlockManager: Found block rdd_14_39 locally
+23/05/28 13:14:58 INFO CoarseGrainedExecutorBackend: Got assigned task 1445
+23/05/28 13:14:58 INFO Executor: Running task 40.0 in stage 15.0 (TID 1445)
+23/05/28 13:14:58 INFO BlockManager: Found block rdd_14_40 locally
+23/05/28 13:14:58 INFO Executor: Finished task 37.0 in stage 15.0 (TID 1439). 1812 bytes result sent to driver
+23/05/28 13:14:58 INFO CoarseGrainedExecutorBackend: Got assigned task 1453
+23/05/28 13:14:58 INFO Executor: Running task 52.0 in stage 15.0 (TID 1453)
+23/05/28 13:14:58 INFO BlockManager: Found block rdd_14_52 locally
+23/05/28 13:14:58 INFO Executor: Finished task 36.0 in stage 15.0 (TID 1437). 1769 bytes result sent to driver
+23/05/28 13:14:58 INFO CoarseGrainedExecutorBackend: Got assigned task 1461
+23/05/28 13:14:58 INFO Executor: Running task 53.0 in stage 15.0 (TID 1461)
+23/05/28 13:14:58 INFO BlockManager: Found block rdd_14_53 locally
+23/05/28 13:14:58 INFO Executor: Finished task 52.0 in stage 15.0 (TID 1453). 1726 bytes result sent to driver
+23/05/28 13:14:58 INFO CoarseGrainedExecutorBackend: Got assigned task 1466
+23/05/28 13:14:58 INFO Executor: Running task 54.0 in stage 15.0 (TID 1466)
+23/05/28 13:14:58 INFO BlockManager: Found block rdd_14_54 locally
+23/05/28 13:14:58 INFO Executor: Finished task 39.0 in stage 15.0 (TID 1442). 1769 bytes result sent to driver
+23/05/28 13:14:58 INFO Executor: Finished task 40.0 in stage 15.0 (TID 1445). 1769 bytes result sent to driver
+23/05/28 13:14:58 INFO CoarseGrainedExecutorBackend: Got assigned task 1468
+23/05/28 13:14:58 INFO Executor: Running task 56.0 in stage 15.0 (TID 1468)
+23/05/28 13:14:58 INFO CoarseGrainedExecutorBackend: Got assigned task 1469
+23/05/28 13:14:58 INFO Executor: Running task 68.0 in stage 15.0 (TID 1469)
+23/05/28 13:14:58 INFO BlockManager: Found block rdd_14_68 locally
+23/05/28 13:14:58 INFO BlockManager: Found block rdd_14_56 locally
+23/05/28 13:14:58 INFO Executor: Finished task 54.0 in stage 15.0 (TID 1466). 1726 bytes result sent to driver
+23/05/28 13:14:58 INFO CoarseGrainedExecutorBackend: Got assigned task 1479
+23/05/28 13:14:58 INFO Executor: Running task 69.0 in stage 15.0 (TID 1479)
+23/05/28 13:14:58 INFO BlockManager: Found block rdd_14_69 locally
+23/05/28 13:14:58 INFO Executor: Finished task 53.0 in stage 15.0 (TID 1461). 1812 bytes result sent to driver
+23/05/28 13:14:58 INFO Executor: Finished task 56.0 in stage 15.0 (TID 1468). 1769 bytes result sent to driver
+23/05/28 13:14:58 INFO CoarseGrainedExecutorBackend: Got assigned task 1481
+23/05/28 13:14:58 INFO Executor: Running task 70.0 in stage 15.0 (TID 1481)
+23/05/28 13:14:58 INFO Executor: Finished task 68.0 in stage 15.0 (TID 1469). 1769 bytes result sent to driver
+23/05/28 13:14:58 INFO BlockManager: Found block rdd_14_70 locally
+23/05/28 13:14:58 INFO CoarseGrainedExecutorBackend: Got assigned task 1483
+23/05/28 13:14:58 INFO Executor: Running task 74.0 in stage 15.0 (TID 1483)
+23/05/28 13:14:58 INFO BlockManager: Found block rdd_14_74 locally
+23/05/28 13:14:58 INFO CoarseGrainedExecutorBackend: Got assigned task 1484
+23/05/28 13:14:58 INFO Executor: Running task 77.0 in stage 15.0 (TID 1484)
+23/05/28 13:14:58 INFO BlockManager: Found block rdd_14_77 locally
+23/05/28 13:14:59 INFO Executor: Finished task 74.0 in stage 15.0 (TID 1483). 1726 bytes result sent to driver
+23/05/28 13:14:59 INFO CoarseGrainedExecutorBackend: Got assigned task 1496
+23/05/28 13:14:59 INFO Executor: Running task 82.0 in stage 15.0 (TID 1496)
+23/05/28 13:14:59 INFO BlockManager: Found block rdd_14_82 locally
+23/05/28 13:14:59 INFO Executor: Finished task 69.0 in stage 15.0 (TID 1479). 1812 bytes result sent to driver
+23/05/28 13:14:59 INFO CoarseGrainedExecutorBackend: Got assigned task 1504
+23/05/28 13:14:59 INFO Executor: Finished task 77.0 in stage 15.0 (TID 1484). 1769 bytes result sent to driver
+23/05/28 13:14:59 INFO Executor: Running task 85.0 in stage 15.0 (TID 1504)
+23/05/28 13:14:59 INFO BlockManager: Found block rdd_14_85 locally
+23/05/28 13:14:59 INFO CoarseGrainedExecutorBackend: Got assigned task 1505
+23/05/28 13:14:59 INFO Executor: Running task 96.0 in stage 15.0 (TID 1505)
+23/05/28 13:14:59 INFO BlockManager: Found block rdd_14_96 locally
+23/05/28 13:14:59 INFO Executor: Finished task 70.0 in stage 15.0 (TID 1481). 1769 bytes result sent to driver
+23/05/28 13:14:59 INFO CoarseGrainedExecutorBackend: Got assigned task 1508
+23/05/28 13:14:59 INFO Executor: Running task 98.0 in stage 15.0 (TID 1508)
+23/05/28 13:14:59 INFO BlockManager: Found block rdd_14_98 locally
+23/05/28 13:14:59 INFO Executor: Finished task 82.0 in stage 15.0 (TID 1496). 1769 bytes result sent to driver
+23/05/28 13:14:59 INFO Executor: Finished task 96.0 in stage 15.0 (TID 1505). 1769 bytes result sent to driver
+23/05/28 13:14:59 INFO CoarseGrainedExecutorBackend: Got assigned task 1515
+23/05/28 13:14:59 INFO Executor: Running task 100.0 in stage 15.0 (TID 1515)
+23/05/28 13:14:59 INFO BlockManager: Found block rdd_14_100 locally
+23/05/28 13:14:59 INFO Executor: Finished task 85.0 in stage 15.0 (TID 1504). 1769 bytes result sent to driver
+23/05/28 13:14:59 INFO Executor: Finished task 98.0 in stage 15.0 (TID 1508). 1812 bytes result sent to driver
+23/05/28 13:14:59 INFO Executor: Finished task 100.0 in stage 15.0 (TID 1515). 1769 bytes result sent to driver
+23/05/28 13:15:00 INFO CoarseGrainedExecutorBackend: Got assigned task 1519
+23/05/28 13:15:00 INFO Executor: Running task 0.0 in stage 16.0 (TID 1519)
+23/05/28 13:15:00 INFO MapOutputTrackerWorker: Updating epoch to 7 and clearing cache
+23/05/28 13:15:00 INFO TorrentBroadcast: Started reading broadcast variable 24 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:15:00 INFO CoarseGrainedExecutorBackend: Got assigned task 1523
+23/05/28 13:15:00 INFO Executor: Running task 4.0 in stage 16.0 (TID 1523)
+23/05/28 13:15:00 INFO CoarseGrainedExecutorBackend: Got assigned task 1527
+23/05/28 13:15:00 INFO CoarseGrainedExecutorBackend: Got assigned task 1531
+23/05/28 13:15:00 INFO Executor: Running task 8.0 in stage 16.0 (TID 1527)
+23/05/28 13:15:00 INFO Executor: Running task 12.0 in stage 16.0 (TID 1531)
+23/05/28 13:15:00 INFO MemoryStore: Block broadcast_24_piece0 stored as bytes in memory (estimated size 6.2 KiB, free 1298.8 MiB)
+23/05/28 13:15:00 INFO TorrentBroadcast: Reading broadcast variable 24 took 143 ms
+23/05/28 13:15:00 INFO MemoryStore: Block broadcast_24 stored as values in memory (estimated size 14.6 KiB, free 1298.8 MiB)
+23/05/28 13:15:00 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 6, fetching them
+23/05/28 13:15:00 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 6, fetching them
+23/05/28 13:15:00 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 6, fetching them
+23/05/28 13:15:00 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 6, fetching them
+23/05/28 13:15:00 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@192.168.1.45:45441)
+23/05/28 13:15:00 INFO MapOutputTrackerWorker: Got the map output locations
+23/05/28 13:15:00 INFO ShuffleBlockFetcherIterator: Getting 109 (7.2 MiB) non-empty blocks including 22 (1497.1 KiB) local and 28 (1905.2 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (3.8 MiB) remote blocks
+23/05/28 13:15:00 INFO ShuffleBlockFetcherIterator: Getting 109 (4.4 MiB) non-empty blocks including 22 (929.9 KiB) local and 28 (1188.7 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (2.4 MiB) remote blocks
+23/05/28 13:15:00 INFO ShuffleBlockFetcherIterator: Getting 109 (5.2 MiB) non-empty blocks including 22 (1087.6 KiB) local and 28 (1379.8 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (2.8 MiB) remote blocks
+23/05/28 13:15:00 INFO ShuffleBlockFetcherIterator: Getting 109 (7.8 MiB) non-empty blocks including 22 (1625.7 KiB) local and 28 (2.0 MiB) host-local and 0 (0.0 B) push-merged-local and 59 (4.2 MiB) remote blocks
+23/05/28 13:15:00 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 2 ms
+23/05/28 13:15:00 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 2 ms
+23/05/28 13:15:00 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 3 ms
+23/05/28 13:15:00 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 3 ms
+23/05/28 13:15:09 INFO Executor: Finished task 4.0 in stage 16.0 (TID 1523). 2967 bytes result sent to driver
+23/05/28 13:15:10 INFO CoarseGrainedExecutorBackend: Got assigned task 1536
+23/05/28 13:15:10 INFO Executor: Running task 17.0 in stage 16.0 (TID 1536)
+23/05/28 13:15:10 INFO ShuffleBlockFetcherIterator: Getting 109 (10.6 MiB) non-empty blocks including 22 (2.1 MiB) local and 28 (2.7 MiB) host-local and 0 (0.0 B) push-merged-local and 59 (5.7 MiB) remote blocks
+23/05/28 13:15:10 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 1 ms
+23/05/28 13:15:21 INFO Executor: Finished task 12.0 in stage 16.0 (TID 1531). 2967 bytes result sent to driver
+23/05/28 13:15:22 INFO CoarseGrainedExecutorBackend: Got assigned task 1544
+23/05/28 13:15:22 INFO Executor: Running task 25.0 in stage 16.0 (TID 1544)
+23/05/28 13:15:22 INFO ShuffleBlockFetcherIterator: Getting 109 (6.1 MiB) non-empty blocks including 22 (1271.0 KiB) local and 28 (1591.4 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (3.3 MiB) remote blocks
+23/05/28 13:15:22 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 1 ms
+23/05/28 13:15:26 INFO Executor: Finished task 8.0 in stage 16.0 (TID 1527). 2967 bytes result sent to driver
+23/05/28 13:15:26 INFO CoarseGrainedExecutorBackend: Got assigned task 1547
+23/05/28 13:15:26 INFO Executor: Running task 28.0 in stage 16.0 (TID 1547)
+23/05/28 13:15:26 INFO ShuffleBlockFetcherIterator: Getting 109 (4.9 MiB) non-empty blocks including 22 (1027.6 KiB) local and 28 (1297.9 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (2.7 MiB) remote blocks
+23/05/28 13:15:26 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 1 ms
+23/05/28 13:15:29 INFO Executor: Finished task 0.0 in stage 16.0 (TID 1519). 2967 bytes result sent to driver
+23/05/28 13:15:30 INFO CoarseGrainedExecutorBackend: Got assigned task 1548
+23/05/28 13:15:30 INFO Executor: Running task 29.0 in stage 16.0 (TID 1548)
+23/05/28 13:15:30 INFO ShuffleBlockFetcherIterator: Getting 109 (8.0 MiB) non-empty blocks including 22 (1646.1 KiB) local and 28 (2.1 MiB) host-local and 0 (0.0 B) push-merged-local and 59 (4.3 MiB) remote blocks
+23/05/28 13:15:30 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 3 ms
+23/05/28 13:15:39 INFO Executor: Finished task 17.0 in stage 16.0 (TID 1536). 2967 bytes result sent to driver
+23/05/28 13:15:42 INFO Executor: Finished task 25.0 in stage 16.0 (TID 1544). 2967 bytes result sent to driver
+23/05/28 13:15:47 INFO Executor: Finished task 28.0 in stage 16.0 (TID 1547). 2967 bytes result sent to driver
+23/05/28 13:15:51 INFO Executor: Finished task 29.0 in stage 16.0 (TID 1548). 2967 bytes result sent to driver
+23/05/28 13:15:52 INFO CoarseGrainedExecutorBackend: Got assigned task 1629
+23/05/28 13:15:52 INFO Executor: Running task 4.0 in stage 17.0 (TID 1629)
+23/05/28 13:15:52 INFO TorrentBroadcast: Started reading broadcast variable 26 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:15:52 INFO CoarseGrainedExecutorBackend: Got assigned task 1633
+23/05/28 13:15:52 INFO Executor: Running task 8.0 in stage 17.0 (TID 1633)
+23/05/28 13:15:52 INFO CoarseGrainedExecutorBackend: Got assigned task 1637
+23/05/28 13:15:52 INFO Executor: Running task 12.0 in stage 17.0 (TID 1637)
+23/05/28 13:15:52 INFO CoarseGrainedExecutorBackend: Got assigned task 1641
+23/05/28 13:15:52 INFO Executor: Running task 15.0 in stage 17.0 (TID 1641)
+23/05/28 13:15:52 INFO MemoryStore: Block broadcast_26_piece0 stored as bytes in memory (estimated size 45.9 KiB, free 1299.0 MiB)
+23/05/28 13:15:52 INFO TorrentBroadcast: Reading broadcast variable 26 took 128 ms
+23/05/28 13:15:52 INFO MemoryStore: Block broadcast_26 stored as values in memory (estimated size 85.0 KiB, free 1298.9 MiB)
+23/05/28 13:15:52 INFO BlockManager: Found block rdd_14_15 locally
+23/05/28 13:15:52 INFO BlockManager: Found block rdd_14_12 locally
+23/05/28 13:15:52 INFO BlockManager: Found block rdd_14_8 locally
+23/05/28 13:15:52 INFO BlockManager: Found block rdd_14_4 locally
+23/05/28 13:15:52 INFO TorrentBroadcast: Started reading broadcast variable 25 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:15:52 INFO MemoryStore: Block broadcast_25_piece0 stored as bytes in memory (estimated size 101.0 B, free 1298.9 MiB)
+23/05/28 13:15:52 INFO TorrentBroadcast: Reading broadcast variable 25 took 92 ms
+23/05/28 13:15:52 INFO MemoryStore: Block broadcast_25 stored as values in memory (estimated size 40.0 B, free 1298.9 MiB)
+23/05/28 13:15:52 INFO Executor: Finished task 15.0 in stage 17.0 (TID 1641). 1812 bytes result sent to driver
+23/05/28 13:15:52 INFO Executor: Finished task 4.0 in stage 17.0 (TID 1629). 1769 bytes result sent to driver
+23/05/28 13:15:52 INFO Executor: Finished task 8.0 in stage 17.0 (TID 1633). 1769 bytes result sent to driver
+23/05/28 13:15:52 INFO CoarseGrainedExecutorBackend: Got assigned task 1655
+23/05/28 13:15:52 INFO Executor: Running task 36.0 in stage 17.0 (TID 1655)
+23/05/28 13:15:52 INFO Executor: Finished task 12.0 in stage 17.0 (TID 1637). 1769 bytes result sent to driver
+23/05/28 13:15:52 INFO BlockManager: Found block rdd_14_36 locally
+23/05/28 13:15:52 INFO CoarseGrainedExecutorBackend: Got assigned task 1656
+23/05/28 13:15:52 INFO Executor: Running task 37.0 in stage 17.0 (TID 1656)
+23/05/28 13:15:52 INFO CoarseGrainedExecutorBackend: Got assigned task 1657
+23/05/28 13:15:52 INFO Executor: Running task 39.0 in stage 17.0 (TID 1657)
+23/05/28 13:15:52 INFO CoarseGrainedExecutorBackend: Got assigned task 1658
+23/05/28 13:15:52 INFO Executor: Running task 40.0 in stage 17.0 (TID 1658)
+23/05/28 13:15:52 INFO BlockManager: Found block rdd_14_39 locally
+23/05/28 13:15:52 INFO BlockManager: Found block rdd_14_40 locally
+23/05/28 13:15:52 INFO BlockManager: Found block rdd_14_37 locally
+23/05/28 13:15:53 INFO Executor: Finished task 37.0 in stage 17.0 (TID 1656). 1726 bytes result sent to driver
+23/05/28 13:15:53 INFO CoarseGrainedExecutorBackend: Got assigned task 1668
+23/05/28 13:15:53 INFO Executor: Running task 52.0 in stage 17.0 (TID 1668)
+23/05/28 13:15:53 INFO BlockManager: Found block rdd_14_52 locally
+23/05/28 13:15:53 INFO Executor: Finished task 36.0 in stage 17.0 (TID 1655). 1769 bytes result sent to driver
+23/05/28 13:15:53 INFO Executor: Finished task 39.0 in stage 17.0 (TID 1657). 1769 bytes result sent to driver
+23/05/28 13:15:53 INFO CoarseGrainedExecutorBackend: Got assigned task 1669
+23/05/28 13:15:53 INFO Executor: Running task 53.0 in stage 17.0 (TID 1669)
+23/05/28 13:15:53 INFO BlockManager: Found block rdd_14_53 locally
+23/05/28 13:15:53 INFO Executor: Finished task 40.0 in stage 17.0 (TID 1658). 1769 bytes result sent to driver
+23/05/28 13:15:53 INFO CoarseGrainedExecutorBackend: Got assigned task 1672
+23/05/28 13:15:53 INFO Executor: Running task 54.0 in stage 17.0 (TID 1672)
+23/05/28 13:15:53 INFO BlockManager: Found block rdd_14_54 locally
+23/05/28 13:15:53 INFO Executor: Finished task 52.0 in stage 17.0 (TID 1668). 1769 bytes result sent to driver
+23/05/28 13:15:53 INFO CoarseGrainedExecutorBackend: Got assigned task 1676
+23/05/28 13:15:53 INFO Executor: Running task 56.0 in stage 17.0 (TID 1676)
+23/05/28 13:15:53 INFO CoarseGrainedExecutorBackend: Got assigned task 1679
+23/05/28 13:15:53 INFO Executor: Running task 68.0 in stage 17.0 (TID 1679)
+23/05/28 13:15:53 INFO BlockManager: Found block rdd_14_56 locally
+23/05/28 13:15:53 INFO BlockManager: Found block rdd_14_68 locally
+23/05/28 13:15:53 INFO Executor: Finished task 54.0 in stage 17.0 (TID 1672). 1769 bytes result sent to driver
+23/05/28 13:15:53 INFO Executor: Finished task 53.0 in stage 17.0 (TID 1669). 1769 bytes result sent to driver
+23/05/28 13:15:53 INFO CoarseGrainedExecutorBackend: Got assigned task 1687
+23/05/28 13:15:53 INFO CoarseGrainedExecutorBackend: Got assigned task 1688
+23/05/28 13:15:53 INFO Executor: Running task 69.0 in stage 17.0 (TID 1687)
+23/05/28 13:15:53 INFO Executor: Running task 70.0 in stage 17.0 (TID 1688)
+23/05/28 13:15:53 INFO BlockManager: Found block rdd_14_69 locally
+23/05/28 13:15:53 INFO BlockManager: Found block rdd_14_70 locally
+23/05/28 13:15:54 INFO Executor: Finished task 68.0 in stage 17.0 (TID 1679). 1769 bytes result sent to driver
+23/05/28 13:15:54 INFO Executor: Finished task 56.0 in stage 17.0 (TID 1676). 1769 bytes result sent to driver
+23/05/28 13:15:54 INFO CoarseGrainedExecutorBackend: Got assigned task 1693
+23/05/28 13:15:54 INFO CoarseGrainedExecutorBackend: Got assigned task 1695
+23/05/28 13:15:54 INFO Executor: Running task 74.0 in stage 17.0 (TID 1693)
+23/05/28 13:15:54 INFO Executor: Running task 77.0 in stage 17.0 (TID 1695)
+23/05/28 13:15:54 INFO BlockManager: Found block rdd_14_77 locally
+23/05/28 13:15:54 INFO BlockManager: Found block rdd_14_74 locally
+23/05/28 13:15:54 INFO Executor: Finished task 70.0 in stage 17.0 (TID 1688). 1769 bytes result sent to driver
+23/05/28 13:15:54 INFO CoarseGrainedExecutorBackend: Got assigned task 1698
+23/05/28 13:15:54 INFO Executor: Running task 82.0 in stage 17.0 (TID 1698)
+23/05/28 13:15:54 INFO BlockManager: Found block rdd_14_82 locally
+23/05/28 13:15:54 INFO Executor: Finished task 69.0 in stage 17.0 (TID 1687). 1769 bytes result sent to driver
+23/05/28 13:15:54 INFO CoarseGrainedExecutorBackend: Got assigned task 1700
+23/05/28 13:15:54 INFO Executor: Running task 85.0 in stage 17.0 (TID 1700)
+23/05/28 13:15:54 INFO BlockManager: Found block rdd_14_85 locally
+23/05/28 13:15:54 INFO Executor: Finished task 77.0 in stage 17.0 (TID 1695). 1769 bytes result sent to driver
+23/05/28 13:15:54 INFO Executor: Finished task 74.0 in stage 17.0 (TID 1693). 1769 bytes result sent to driver
+23/05/28 13:15:54 INFO CoarseGrainedExecutorBackend: Got assigned task 1708
+23/05/28 13:15:54 INFO Executor: Running task 96.0 in stage 17.0 (TID 1708)
+23/05/28 13:15:54 INFO BlockManager: Found block rdd_14_96 locally
+23/05/28 13:15:54 INFO CoarseGrainedExecutorBackend: Got assigned task 1710
+23/05/28 13:15:54 INFO Executor: Running task 98.0 in stage 17.0 (TID 1710)
+23/05/28 13:15:54 INFO BlockManager: Found block rdd_14_98 locally
+23/05/28 13:15:54 INFO Executor: Finished task 82.0 in stage 17.0 (TID 1698). 1812 bytes result sent to driver
+23/05/28 13:15:54 INFO CoarseGrainedExecutorBackend: Got assigned task 1714
+23/05/28 13:15:54 INFO Executor: Running task 100.0 in stage 17.0 (TID 1714)
+23/05/28 13:15:54 INFO Executor: Finished task 85.0 in stage 17.0 (TID 1700). 1769 bytes result sent to driver
+23/05/28 13:15:54 INFO BlockManager: Found block rdd_14_100 locally
+23/05/28 13:15:54 INFO Executor: Finished task 96.0 in stage 17.0 (TID 1708). 1812 bytes result sent to driver
+23/05/28 13:15:55 INFO Executor: Finished task 98.0 in stage 17.0 (TID 1710). 1769 bytes result sent to driver
+23/05/28 13:15:55 INFO Executor: Finished task 100.0 in stage 17.0 (TID 1714). 1769 bytes result sent to driver
+23/05/28 13:15:56 INFO CoarseGrainedExecutorBackend: Got assigned task 1738
+23/05/28 13:15:56 INFO Executor: Running task 1.0 in stage 18.0 (TID 1738)
+23/05/28 13:15:56 INFO MapOutputTrackerWorker: Updating epoch to 8 and clearing cache
+23/05/28 13:15:56 INFO TorrentBroadcast: Started reading broadcast variable 27 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:15:56 INFO CoarseGrainedExecutorBackend: Got assigned task 1742
+23/05/28 13:15:56 INFO Executor: Running task 5.0 in stage 18.0 (TID 1742)
+23/05/28 13:15:56 INFO CoarseGrainedExecutorBackend: Got assigned task 1746
+23/05/28 13:15:56 INFO Executor: Running task 9.0 in stage 18.0 (TID 1746)
+23/05/28 13:15:56 INFO CoarseGrainedExecutorBackend: Got assigned task 1750
+23/05/28 13:15:56 INFO Executor: Running task 13.0 in stage 18.0 (TID 1750)
+23/05/28 13:15:56 INFO MemoryStore: Block broadcast_27_piece0 stored as bytes in memory (estimated size 8.1 KiB, free 1298.9 MiB)
+23/05/28 13:15:56 INFO TorrentBroadcast: Reading broadcast variable 27 took 165 ms
+23/05/28 13:15:56 INFO MemoryStore: Block broadcast_27 stored as values in memory (estimated size 22.0 KiB, free 1298.9 MiB)
+23/05/28 13:15:56 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 7, fetching them
+23/05/28 13:15:56 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 7, fetching them
+23/05/28 13:15:56 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@192.168.1.45:45441)
+23/05/28 13:15:56 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 7, fetching them
+23/05/28 13:15:56 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 7, fetching them
+23/05/28 13:15:56 INFO MapOutputTrackerWorker: Got the map output locations
+23/05/28 13:15:56 INFO ShuffleBlockFetcherIterator: Getting 109 (2.9 MiB) non-empty blocks including 22 (588.4 KiB) local and 28 (770.6 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (1603.0 KiB) remote blocks
+23/05/28 13:15:56 INFO ShuffleBlockFetcherIterator: Getting 109 (6.0 MiB) non-empty blocks including 22 (1243.9 KiB) local and 28 (1585.8 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (3.2 MiB) remote blocks
+23/05/28 13:15:56 INFO ShuffleBlockFetcherIterator: Getting 109 (5.9 MiB) non-empty blocks including 22 (1211.7 KiB) local and 28 (1559.7 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (3.1 MiB) remote blocks
+23/05/28 13:15:56 INFO ShuffleBlockFetcherIterator: Getting 109 (3.4 MiB) non-empty blocks including 22 (712.1 KiB) local and 28 (893.1 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (1914.5 KiB) remote blocks
+23/05/28 13:15:56 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 2 ms
+23/05/28 13:15:56 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 3 ms
+23/05/28 13:15:56 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 2 ms
+23/05/28 13:15:56 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 5 ms
+23/05/28 13:16:16 INFO Executor: Finished task 9.0 in stage 18.0 (TID 1746). 2967 bytes result sent to driver
+23/05/28 13:16:18 INFO CoarseGrainedExecutorBackend: Got assigned task 1764
+23/05/28 13:16:18 INFO Executor: Running task 27.0 in stage 18.0 (TID 1764)
+23/05/28 13:16:18 INFO ShuffleBlockFetcherIterator: Getting 109 (4.7 MiB) non-empty blocks including 22 (988.7 KiB) local and 28 (1254.4 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (2.5 MiB) remote blocks
+23/05/28 13:16:18 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 1 ms
+23/05/28 13:16:39 INFO Executor: Finished task 13.0 in stage 18.0 (TID 1750). 2967 bytes result sent to driver
+23/05/28 13:16:41 INFO CoarseGrainedExecutorBackend: Got assigned task 1771
+23/05/28 13:16:41 INFO Executor: Running task 34.0 in stage 18.0 (TID 1771)
+23/05/28 13:16:41 INFO ShuffleBlockFetcherIterator: Getting 109 (4.1 MiB) non-empty blocks including 22 (850.6 KiB) local and 28 (1070.9 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (2.2 MiB) remote blocks
+23/05/28 13:16:41 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 1 ms
+23/05/28 13:16:56 INFO Executor: Finished task 1.0 in stage 18.0 (TID 1738). 2967 bytes result sent to driver
+23/05/28 13:16:59 INFO CoarseGrainedExecutorBackend: Got assigned task 1776
+23/05/28 13:16:59 INFO Executor: Running task 39.0 in stage 18.0 (TID 1776)
+23/05/28 13:16:59 INFO ShuffleBlockFetcherIterator: Getting 109 (3.5 MiB) non-empty blocks including 22 (724.4 KiB) local and 28 (941.1 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (1952.3 KiB) remote blocks
+23/05/28 13:16:59 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 1 ms
+23/05/28 13:17:24 INFO Executor: Finished task 5.0 in stage 18.0 (TID 1742). 2967 bytes result sent to driver
+23/05/28 13:17:25 INFO CoarseGrainedExecutorBackend: Got assigned task 1787
+23/05/28 13:17:25 INFO Executor: Running task 50.0 in stage 18.0 (TID 1787)
+23/05/28 13:17:25 INFO ShuffleBlockFetcherIterator: Getting 109 (7.2 MiB) non-empty blocks including 22 (1490.3 KiB) local and 28 (1892.2 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (3.9 MiB) remote blocks
+23/05/28 13:17:25 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 1 ms
+23/05/28 13:17:38 INFO Executor: Finished task 27.0 in stage 18.0 (TID 1764). 2967 bytes result sent to driver
+23/05/28 13:17:41 INFO CoarseGrainedExecutorBackend: Got assigned task 1797
+23/05/28 13:17:41 INFO Executor: Running task 60.0 in stage 18.0 (TID 1797)
+23/05/28 13:17:41 INFO ShuffleBlockFetcherIterator: Getting 109 (3.4 MiB) non-empty blocks including 22 (716.0 KiB) local and 28 (901.2 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (1876.8 KiB) remote blocks
+23/05/28 13:17:41 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 2 ms
+23/05/28 13:17:46 INFO Executor: Finished task 34.0 in stage 18.0 (TID 1771). 2967 bytes result sent to driver
+23/05/28 13:17:51 INFO Executor: Finished task 39.0 in stage 18.0 (TID 1776). 2967 bytes result sent to driver
+23/05/28 13:17:56 INFO Executor: Finished task 50.0 in stage 18.0 (TID 1787). 2967 bytes result sent to driver
+23/05/28 13:17:56 INFO Executor: Finished task 60.0 in stage 18.0 (TID 1797). 2967 bytes result sent to driver
+23/05/28 13:17:57 INFO CoarseGrainedExecutorBackend: Got assigned task 1846
+23/05/28 13:17:57 INFO Executor: Running task 4.0 in stage 19.0 (TID 1846)
+23/05/28 13:17:57 INFO TorrentBroadcast: Started reading broadcast variable 29 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:17:57 INFO CoarseGrainedExecutorBackend: Got assigned task 1850
+23/05/28 13:17:57 INFO Executor: Running task 8.0 in stage 19.0 (TID 1850)
+23/05/28 13:17:57 INFO CoarseGrainedExecutorBackend: Got assigned task 1854
+23/05/28 13:17:57 INFO Executor: Running task 12.0 in stage 19.0 (TID 1854)
+23/05/28 13:17:57 INFO CoarseGrainedExecutorBackend: Got assigned task 1858
+23/05/28 13:17:57 INFO Executor: Running task 15.0 in stage 19.0 (TID 1858)
+23/05/28 13:17:57 INFO MemoryStore: Block broadcast_29_piece0 stored as bytes in memory (estimated size 57.1 KiB, free 1298.8 MiB)
+23/05/28 13:17:57 INFO TorrentBroadcast: Reading broadcast variable 29 took 102 ms
+23/05/28 13:17:57 INFO MemoryStore: Block broadcast_29 stored as values in memory (estimated size 129.0 KiB, free 1298.7 MiB)
+23/05/28 13:17:57 INFO BlockManager: Found block rdd_14_12 locally
+23/05/28 13:17:57 INFO BlockManager: Found block rdd_14_8 locally
+23/05/28 13:17:57 INFO BlockManager: Found block rdd_14_15 locally
+23/05/28 13:17:57 INFO BlockManager: Found block rdd_14_4 locally
+23/05/28 13:17:57 INFO TorrentBroadcast: Started reading broadcast variable 28 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:17:57 INFO MemoryStore: Block broadcast_28_piece0 stored as bytes in memory (estimated size 101.0 B, free 1298.7 MiB)
+23/05/28 13:17:57 INFO TorrentBroadcast: Reading broadcast variable 28 took 39 ms
+23/05/28 13:17:57 INFO MemoryStore: Block broadcast_28 stored as values in memory (estimated size 40.0 B, free 1298.7 MiB)
+23/05/28 13:17:57 INFO Executor: Finished task 4.0 in stage 19.0 (TID 1846). 1812 bytes result sent to driver
+23/05/28 13:17:57 INFO Executor: Finished task 12.0 in stage 19.0 (TID 1854). 1769 bytes result sent to driver
+23/05/28 13:17:57 INFO Executor: Finished task 15.0 in stage 19.0 (TID 1858). 1769 bytes result sent to driver
+23/05/28 13:17:57 INFO CoarseGrainedExecutorBackend: Got assigned task 1868
+23/05/28 13:17:57 INFO Executor: Running task 36.0 in stage 19.0 (TID 1868)
+23/05/28 13:17:57 INFO CoarseGrainedExecutorBackend: Got assigned task 1869
+23/05/28 13:17:57 INFO Executor: Running task 37.0 in stage 19.0 (TID 1869)
+23/05/28 13:17:57 INFO BlockManager: Found block rdd_14_36 locally
+23/05/28 13:17:57 INFO BlockManager: Found block rdd_14_37 locally
+23/05/28 13:17:57 INFO CoarseGrainedExecutorBackend: Got assigned task 1870
+23/05/28 13:17:57 INFO Executor: Running task 39.0 in stage 19.0 (TID 1870)
+23/05/28 13:17:57 INFO BlockManager: Found block rdd_14_39 locally
+23/05/28 13:17:57 INFO Executor: Finished task 8.0 in stage 19.0 (TID 1850). 1769 bytes result sent to driver
+23/05/28 13:17:57 INFO CoarseGrainedExecutorBackend: Got assigned task 1873
+23/05/28 13:17:57 INFO Executor: Running task 40.0 in stage 19.0 (TID 1873)
+23/05/28 13:17:57 INFO BlockManager: Found block rdd_14_40 locally
+23/05/28 13:17:58 INFO Executor: Finished task 39.0 in stage 19.0 (TID 1870). 1769 bytes result sent to driver
+23/05/28 13:17:58 INFO Executor: Finished task 36.0 in stage 19.0 (TID 1868). 1812 bytes result sent to driver
+23/05/28 13:17:58 INFO Executor: Finished task 37.0 in stage 19.0 (TID 1869). 1769 bytes result sent to driver
+23/05/28 13:17:58 INFO CoarseGrainedExecutorBackend: Got assigned task 1884
+23/05/28 13:17:58 INFO Executor: Running task 52.0 in stage 19.0 (TID 1884)
+23/05/28 13:17:58 INFO BlockManager: Found block rdd_14_52 locally
+23/05/28 13:17:58 INFO CoarseGrainedExecutorBackend: Got assigned task 1885
+23/05/28 13:17:58 INFO CoarseGrainedExecutorBackend: Got assigned task 1886
+23/05/28 13:17:58 INFO Executor: Running task 53.0 in stage 19.0 (TID 1885)
+23/05/28 13:17:58 INFO Executor: Running task 54.0 in stage 19.0 (TID 1886)
+23/05/28 13:17:58 INFO BlockManager: Found block rdd_14_54 locally
+23/05/28 13:17:58 INFO BlockManager: Found block rdd_14_53 locally
+23/05/28 13:17:58 INFO Executor: Finished task 40.0 in stage 19.0 (TID 1873). 1769 bytes result sent to driver
+23/05/28 13:17:58 INFO CoarseGrainedExecutorBackend: Got assigned task 1887
+23/05/28 13:17:58 INFO Executor: Running task 56.0 in stage 19.0 (TID 1887)
+23/05/28 13:17:58 INFO BlockManager: Found block rdd_14_56 locally
+23/05/28 13:17:58 INFO Executor: Finished task 54.0 in stage 19.0 (TID 1886). 1812 bytes result sent to driver
+23/05/28 13:17:58 INFO CoarseGrainedExecutorBackend: Got assigned task 1894
+23/05/28 13:17:58 INFO Executor: Running task 68.0 in stage 19.0 (TID 1894)
+23/05/28 13:17:58 INFO BlockManager: Found block rdd_14_68 locally
+23/05/28 13:17:58 INFO Executor: Finished task 52.0 in stage 19.0 (TID 1884). 1769 bytes result sent to driver
+23/05/28 13:17:58 INFO CoarseGrainedExecutorBackend: Got assigned task 1899
+23/05/28 13:17:58 INFO Executor: Running task 69.0 in stage 19.0 (TID 1899)
+23/05/28 13:17:58 INFO BlockManager: Found block rdd_14_69 locally
+23/05/28 13:17:59 INFO Executor: Finished task 53.0 in stage 19.0 (TID 1885). 1769 bytes result sent to driver
+23/05/28 13:17:59 INFO CoarseGrainedExecutorBackend: Got assigned task 1902
+23/05/28 13:17:59 INFO Executor: Running task 70.0 in stage 19.0 (TID 1902)
+23/05/28 13:17:59 INFO BlockManager: Found block rdd_14_70 locally
+23/05/28 13:17:59 INFO Executor: Finished task 56.0 in stage 19.0 (TID 1887). 1812 bytes result sent to driver
+23/05/28 13:17:59 INFO CoarseGrainedExecutorBackend: Got assigned task 1904
+23/05/28 13:17:59 INFO Executor: Running task 74.0 in stage 19.0 (TID 1904)
+23/05/28 13:17:59 INFO BlockManager: Found block rdd_14_74 locally
+23/05/28 13:17:59 INFO Executor: Finished task 68.0 in stage 19.0 (TID 1894). 1812 bytes result sent to driver
+23/05/28 13:17:59 INFO CoarseGrainedExecutorBackend: Got assigned task 1912
+23/05/28 13:17:59 INFO Executor: Running task 77.0 in stage 19.0 (TID 1912)
+23/05/28 13:17:59 INFO BlockManager: Found block rdd_14_77 locally
+23/05/28 13:17:59 INFO Executor: Finished task 70.0 in stage 19.0 (TID 1902). 1769 bytes result sent to driver
+23/05/28 13:17:59 INFO CoarseGrainedExecutorBackend: Got assigned task 1915
+23/05/28 13:17:59 INFO Executor: Running task 82.0 in stage 19.0 (TID 1915)
+23/05/28 13:17:59 INFO BlockManager: Found block rdd_14_82 locally
+23/05/28 13:17:59 INFO Executor: Finished task 69.0 in stage 19.0 (TID 1899). 1769 bytes result sent to driver
+23/05/28 13:17:59 INFO CoarseGrainedExecutorBackend: Got assigned task 1916
+23/05/28 13:17:59 INFO Executor: Running task 85.0 in stage 19.0 (TID 1916)
+23/05/28 13:17:59 INFO BlockManager: Found block rdd_14_85 locally
+23/05/28 13:17:59 INFO Executor: Finished task 74.0 in stage 19.0 (TID 1904). 1769 bytes result sent to driver
+23/05/28 13:17:59 INFO CoarseGrainedExecutorBackend: Got assigned task 1918
+23/05/28 13:17:59 INFO Executor: Running task 96.0 in stage 19.0 (TID 1918)
+23/05/28 13:17:59 INFO BlockManager: Found block rdd_14_96 locally
+23/05/28 13:18:00 INFO Executor: Finished task 77.0 in stage 19.0 (TID 1912). 1812 bytes result sent to driver
+23/05/28 13:18:00 INFO Executor: Finished task 82.0 in stage 19.0 (TID 1915). 1812 bytes result sent to driver
+23/05/28 13:18:00 INFO CoarseGrainedExecutorBackend: Got assigned task 1930
+23/05/28 13:18:00 INFO Executor: Running task 98.0 in stage 19.0 (TID 1930)
+23/05/28 13:18:00 INFO BlockManager: Found block rdd_14_98 locally
+23/05/28 13:18:00 INFO CoarseGrainedExecutorBackend: Got assigned task 1931
+23/05/28 13:18:00 INFO Executor: Running task 100.0 in stage 19.0 (TID 1931)
+23/05/28 13:18:00 INFO BlockManager: Found block rdd_14_100 locally
+23/05/28 13:18:00 INFO Executor: Finished task 85.0 in stage 19.0 (TID 1916). 1769 bytes result sent to driver
+23/05/28 13:18:00 INFO Executor: Finished task 96.0 in stage 19.0 (TID 1918). 1769 bytes result sent to driver
+23/05/28 13:18:00 INFO Executor: Finished task 98.0 in stage 19.0 (TID 1930). 1812 bytes result sent to driver
+23/05/28 13:18:00 INFO Executor: Finished task 100.0 in stage 19.0 (TID 1931). 1769 bytes result sent to driver
+23/05/28 13:18:01 INFO CoarseGrainedExecutorBackend: Got assigned task 1957
+23/05/28 13:18:01 INFO Executor: Running task 2.0 in stage 20.0 (TID 1957)
+23/05/28 13:18:01 INFO MapOutputTrackerWorker: Updating epoch to 9 and clearing cache
+23/05/28 13:18:01 INFO TorrentBroadcast: Started reading broadcast variable 30 with 1 pieces (estimated total size 4.0 MiB)
+23/05/28 13:18:01 INFO CoarseGrainedExecutorBackend: Got assigned task 1961
+23/05/28 13:18:01 INFO Executor: Running task 6.0 in stage 20.0 (TID 1961)
+23/05/28 13:18:01 INFO CoarseGrainedExecutorBackend: Got assigned task 1965
+23/05/28 13:18:01 INFO Executor: Running task 10.0 in stage 20.0 (TID 1965)
+23/05/28 13:18:01 INFO CoarseGrainedExecutorBackend: Got assigned task 1969
+23/05/28 13:18:01 INFO Executor: Running task 14.0 in stage 20.0 (TID 1969)
+23/05/28 13:18:02 INFO MemoryStore: Block broadcast_30_piece0 stored as bytes in memory (estimated size 11.9 KiB, free 1298.7 MiB)
+23/05/28 13:18:02 INFO TorrentBroadcast: Reading broadcast variable 30 took 273 ms
+23/05/28 13:18:02 INFO MemoryStore: Block broadcast_30 stored as values in memory (estimated size 36.6 KiB, free 1298.6 MiB)
+23/05/28 13:18:02 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 8, fetching them
+23/05/28 13:18:02 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 8, fetching them
+23/05/28 13:18:02 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@192.168.1.45:45441)
+23/05/28 13:18:02 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 8, fetching them
+23/05/28 13:18:02 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 8, fetching them
+23/05/28 13:18:02 INFO MapOutputTrackerWorker: Got the map output locations
+23/05/28 13:18:02 INFO ShuffleBlockFetcherIterator: Getting 109 (9.2 MiB) non-empty blocks including 22 (1909.5 KiB) local and 28 (2.4 MiB) host-local and 0 (0.0 B) push-merged-local and 59 (4.9 MiB) remote blocks
+23/05/28 13:18:02 INFO ShuffleBlockFetcherIterator: Getting 109 (5.8 MiB) non-empty blocks including 22 (1187.1 KiB) local and 28 (1568.5 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (3.1 MiB) remote blocks
+23/05/28 13:18:02 INFO ShuffleBlockFetcherIterator: Getting 109 (2.6 MiB) non-empty blocks including 22 (509.1 KiB) local and 28 (682.5 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (1443.3 KiB) remote blocks
+23/05/28 13:18:02 INFO ShuffleBlockFetcherIterator: Getting 109 (3.3 MiB) non-empty blocks including 22 (710.8 KiB) local and 28 (872.0 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (1844.3 KiB) remote blocks
+23/05/28 13:18:02 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 2 ms
+23/05/28 13:18:02 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 2 ms
+23/05/28 13:18:02 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 2 ms
+23/05/28 13:18:02 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 2 ms
+23/05/28 13:18:34 INFO Executor: Finished task 10.0 in stage 20.0 (TID 1965). 3585 bytes result sent to driver
+23/05/28 13:18:35 INFO CoarseGrainedExecutorBackend: Got assigned task 1988
+23/05/28 13:18:35 INFO Executor: Running task 33.0 in stage 20.0 (TID 1988)
+23/05/28 13:18:35 INFO ShuffleBlockFetcherIterator: Getting 109 (3.1 MiB) non-empty blocks including 22 (649.8 KiB) local and 28 (810.7 KiB) host-local and 0 (0.0 B) push-merged-local and 59 (1716.5 KiB) remote blocks
+23/05/28 13:18:35 INFO ShuffleBlockFetcherIterator: Started 2 remote fetches in 1 ms
+23/05/28 13:18:46 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown
+23/05/28 13:18:46 INFO CoarseGrainedExecutorBackend: Driver from 192.168.1.45:45441 disconnected during shutdown
+23/05/28 13:18:46 INFO CoarseGrainedExecutorBackend: Driver from 192.168.1.45:45441 disconnected during shutdown
+23/05/28 13:18:46 INFO BlockManager: Removing RDD 4
+23/05/28 13:18:46 ERROR TransportResponseHandler: Still have 56 requests outstanding when connection from /192.168.1.45:40565 is closed
+23/05/28 13:18:46 INFO RetryingBlockTransferor: Retrying fetch (1/3) for 3 outstanding blocks after 5000 ms
+23/05/28 13:18:46 ERROR TransportResponseHandler: Still have 58 requests outstanding when connection from /192.168.1.45:43063 is closed
+23/05/28 13:18:46 INFO RetryingBlockTransferor: Retrying fetch (1/3) for 24 outstanding blocks after 5000 ms
+23/05/28 13:18:46 INFO RetryingBlockTransferor: Retrying fetch (1/3) for 26 outstanding blocks after 5000 ms
+23/05/28 13:18:46 INFO RetryingBlockTransferor: Retrying fetch (1/3) for 33 outstanding blocks after 5000 ms
+23/05/28 13:18:46 INFO RetryingBlockTransferor: Retrying fetch (1/3) for 26 outstanding blocks after 5000 ms
+23/05/28 13:18:46 ERROR CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+ outstanding blocks after 5000 ms
+23/05/28 13:18:46 INFO RetryingBlockTransferor: Retrying fetch (1/3) for 26 outstanding blocks after 5000 ms
